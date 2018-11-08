@@ -1,4 +1,4 @@
-<?php include("includes/header.php");?>
+<?php include("shared/header.php");?>
 
 <div class="container" id="main-content">
 	<h2>Welcome to my website!</h2>
@@ -12,4 +12,4 @@
 	</p>
 </div>
 
-<?php include("includes/footer.php");?>
+<?php include("shared/footer.php");?>
