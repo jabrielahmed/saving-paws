@@ -61,11 +61,11 @@
                         <div class="collapse navbar-collapse" id="navbar-collapse-1">
                             <ul class="nav navbar-nav">
                                 <li class="dropdown-holder active current-page-item Active-manu"><a href="index.php"> Home </a> </li>
-                                <li class="dropdown-holder"><a href="events">Events &amp; More</a> </li>
-                                <li class="dropdown-holder"><a href="adoptable-pets">Adoptions</a> </li>
-                                <li class="dropdown-holder"><a href="sparked">S.P.A.R.K.E.D</a> </li>
-                                <li class="dropdown-holder"><a href="help">Help Saving Paws</a> </li>
-                                <li class="dropdown-holder"><a href="about">About Us</a> </li>
+                                <li class="dropdown-holder"><a href="events.php">Events &amp; More</a> </li>
+                                <li class="dropdown-holder"><a href="adoptable-pets.php">Adoptions</a> </li>
+                                <li class="dropdown-holder"><a href="sparked.php">S.P.A.R.K.E.D</a> </li>
+                                <li class="dropdown-holder"><a href="help.php">Help Saving Paws</a> </li>
+                                <li class="dropdown-holder"><a href="about.php">About Us</a> </li>
                                 <li><a href="contact-us.html">Thank You</a></li>
                             </ul>
                         </div>
