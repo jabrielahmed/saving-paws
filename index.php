@@ -1,5 +1,4 @@
-<?php include("shared/header.php"); ?>
-  
+<?php include("shared/header.php"); include("shared/navbar.php"); ?>
   <!-- Theme Main Banner ____________________________ -->
   <section>
     <div id="theme-main-banner">
