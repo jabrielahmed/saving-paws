@@ -27,7 +27,8 @@
 
     <div class="bottom-footer">
         <div class="container">
-            <p>Copyright &copy; 2018 <strong>SavingPaws</strong> SAVING PAWS Animal Rescue, Inc. All Rights Reserved</p>
+            <p>Disclaimer: This site is under development by UW-Oshkosh students as a prototype for the organization Saving Paws. Nothing on the site should be construed in any way as being officially connected with or representative of Saving Paws.</p>
+            <p><a href="http://validator.w3.org/check/referer">Validate Me</a></p>
         </div>
         <!-- /.container -->
     </div>

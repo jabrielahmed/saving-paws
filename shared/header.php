@@ -2,6 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name=“robots” content="noindex, nofollow" />
+    <meta name="description" content="UWO Team 8 Website - Saving Paws">
+    <meta name="keywords" content="HTML,PHP,CSS">
+    <meta name="author" content="Kelsey Lorenz Amyotte, Jabriel Ahmed, Jay-Ar Brouillard, Austin Finke">
+
     <!-- For Resposive Device -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- For IE -->
