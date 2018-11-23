@@ -23,7 +23,7 @@ body{ font-family: sans-serif;}
     width: 143px;
     height: 115px;
     z-index: 9999;
-    top: -115px;
+    top: -75px;
     left:-55px;
     color: #666 !important;
 }

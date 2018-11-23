@@ -4,6 +4,7 @@
  */
 include '/var/www/students/lorenk45/saving-paws/saving-paws/database/database.php';
 date_default_timezone_set("America/Chicago");
+$_SESSION["role"] = "admin";
 /*
  * Function requested by Ajax
  */
@@ -17,7 +18,13 @@ if(isset($_POST['func']) && !empty($_POST['func'])){
             break;
         //For Add Event
         case 'addEvent':
-            addEvent($_POST['date'],$_POST['title']);
+            addEvent($_POST['date'],$_POST['title'],$_POST['startTime'],$_POST['endTime'],$_POST['desc']);
+            break;
+        case 'editEvent':
+            editEvent($_POST['id'],$_POST['date'],$_POST['title'],$_POST['startTime'],$_POST['endTime'],$_POST['desc']);
+            break;
+        case 'deleteEvent':
+            deleteEvent($_POST['id']);
             break;
         default:
             break;
@@ -47,12 +54,24 @@ function getCalender($year = '',$month = '')
         </h2>
         <div id="event_list" class="none"></div>
         <!--For Add Event-->
-        <div id="event_add" class="none">
-            <p>Add Event on <span id="eventDateView"></span></p>
-            <p><b>Event Title: </b><input type="text" id="eventTitle" value=""/></p>
-            <input type="hidden" id="eventDate" value=""/>
-            <input type="button" id="addEventBtn" value="Add"/>
-        </div>
+        <form id="event_add" class="none">
+            <label><strong>Event Title: </strong></label>
+            <input type="text" id="eventTitle" value=""/><br>
+
+            <label><strong>Event Date: </strong></label>
+            <input type="text" id="eventDate"><br>
+
+            <label><strong>Start Time: </strong></label>
+            <input type="text" id="eventStart"><br>
+
+            <label><strong>End Time: </strong></label>
+            <input type="text" id="eventEnd"><br>
+
+            <label>Description:</label><textarea id="eventDesc" value=""></textarea><br>
+            <input class="hidden" id="eventId" value=""/><br>
+            <input type="button" value="Submit" id="addEventBtn" class="btn btn-primary" onclick="return submitEventForm()" />
+            <span id="error"></span>
+        </form>
         <div id="calender_section_top">
             <ul>
                 <li>Sun</li>
@@ -70,12 +89,12 @@ function getCalender($year = '',$month = '')
                 $dayCount = 1;
                 for($cb=1;$cb<=$boxDisplay;$cb++){
                     if(($cb >= $currentMonthFirstDay+1 || $currentMonthFirstDay == 7) && $cb <= ($totalDaysOfMonthDisplay)){
-                        //Current date
-                        $currentDate = $dateYear.'-'.$dateMonth.'-'.$dayCount;
-                        $eventNum = 0;
+
                         //Get number of events based on the current date
                         $conn = db_connect();
-                        $result = $conn->query("SELECT Name FROM Events WHERE Date = '".$currentDate."' AND Status = 1");
+                        $currentDate = $dateMonth.'-'.$dayCount.'-'.$dateYear;
+                        $currentDateForDatabase = $dateYear.'-'.$dateMonth.'-'.$dayCount;
+                        $result = $conn->query("SELECT Name FROM Events WHERE Date = '".$currentDateForDatabase."' AND Status = 1");
                         $eventNum = $result->rowCount();
                         //Define date cell color
                         if(strtotime($currentDate) == strtotime(date("Y-m-d"))){
@@ -97,7 +116,7 @@ function getCalender($year = '',$month = '')
 
                             echo '<div class="popup_event">Events ('.$eventNum.')</div>';
 
-                        echo ($eventNum > 0)?'<a href="javascript:;" onclick="getEvents(\''.$currentDate.'\');">view events</a><br/>':'';
+                        echo ($eventNum > 0)?'<a href="javascript:;" onclick="getEvents(\''.$currentDateForDatabase.'\');">view events</a><br/>':'';
                         //For Add Event
                         if (isset($_SESSION["role"]) && $_SESSION["role"] == "admin") {
                             echo '<a href="javascript:;" onclick="addEvent(\''.$currentDate.'\');">add event</a>';
@@ -116,57 +135,32 @@ function getCalender($year = '',$month = '')
     </div>
 
     <script type="text/javascript">
-        function getCalendar(target_div,year,month){
-            $.ajax({
-                type:'POST',
-                url:'functions/calendar-functions.php',
-                data:'func=getCalender&year='+year+'&month='+month,
-                success:function(html){
-                    $('#'+target_div).html(html);
-                }
+
+        jQuery.loadScript = function (url, callback) {
+            jQuery.ajax({
+                url: url,
+                dataType: 'script',
+                success: callback,
+                async: true
             });
         }
 
-        function getEvents(date){
-            $.ajax({
-                type:'POST',
-                url:'functions/calendar-functions.php',
-                data:'func=getEvents&date='+date,
-                success:function(html){
-                    $('#event_list').html(html);
-                    $('#event_add').slideUp('slow');
-                    $('#event_list').slideDown('slow');
-                }
+        $.loadScript('https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js', function() {
+            $("#eventDate").datepicker();
+        });
+
+        $.loadScript('https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.10.0/jquery.timepicker.min.js', function() {
+            $('#eventStart').timepicker({
+                'timeFormat': 'h:i A',
+                'minTime': '8:00am'
             });
-        }
-        //For Add Event
-        function addEvent(date){
-            $('#eventDate').val(date);
-            $('#eventDateView').html(date);
-            $('#event_list').slideUp('slow');
-            $('#event_add').slideDown('slow');
-        }
-        //For Add Event
-        $(document).ready(function(){
-            $('#addEventBtn').on('click',function(){
-                var date = $('#eventDate').val();
-                var title = $('#eventTitle').val();
-                $.ajax({
-                    type:'POST',
-                    url:'functions/calendar-functions.php',
-                    data:'func=addEvent&date='+date+'&title='+title,
-                    success:function(msg){
-                        if(msg == 'ok'){
-                            var dateSplit = date.split("-");
-                            $('#eventTitle').val('');
-                            alert('Event Created Successfully.');
-                            getCalendar('calendar_div',dateSplit[0],dateSplit[1]);
-                            }else{
-                            alert('Some problem occurred, please try again.');
-                        }
-                    }
-                });
+            $('#eventEnd').timepicker({
+                'timeFormat': 'h:i A',
+                'minTime': '8:30am'
             });
+        });
+
+        $.loadScript('js/calendar.js', function() {
         });
 
         $(document).ready(function(){
@@ -229,32 +223,78 @@ function getEvents($date = ''){
     $date = $date?$date:date("Y-m-d");
     //Get events based on the current date
     $conn = db_connect();
-    $result = $conn->query("SELECT Name, Date, StartTime, EndTime, Description FROM Events WHERE Date = '".$date."' AND Status = 1");
+    $result = $conn->query("SELECT Id, Name, Date, StartTime, EndTime, Description FROM Events WHERE Date = '".$date."' AND Status = 1");
     if ($result->rowCount() > 0) { ?>
         <h2>Events on <?php echo date("l, d M Y",strtotime($date)) ?></h2>
-        <ul>
-        <?php while($row = $result->fetch()) {?>
-            <li>
-                Event: <?=$row['Name']?><br>
-                Date: <?=formatDateString($row['Date'])?><br>
-                Time: <?=formatTimeString($row['StartTime'])?> - <?=formatTimeString($row['EndTime'])?><br>
-                Description: <?=$row["Description"]?>
-            </li>
+        <?php while($row = $result->fetch()) {
+            $Id = $row['Id'];
+            $name = $row['Name'];
+            $startTime = formatTimeString($row['StartTime']);
+            $endTime = formatTimeString($row['EndTime']);
+            $desc = $row["Description"];
+            $date = formatDateString($date);
+            ?>
+            <div class="col-xs-6">
+                <input class="hidden eventListingId" value="<?=$Id?>" />
+                Event: <span class="eventListingName"><?=$name?></span><br>
+                Date: <span class="eventListingDate"><?=$date?></span><br>
+                Time: <span class="eventListingStart"><?=$startTime?></span> - <span class="eventListingEnd"><?=formatTimeString($row['EndTime'])?></span><br>
+                Description: <span class="eventListingDesc"><?=$desc?></span><br>
+
+            <?php if ($_SESSION["role"] == "admin") { ?>
+                <button type="button" onClick="editEvent(this)" class="editEventBtn btn btn-primary" value="Edit">Edit</button>
+                <input type="button"onClick="deleteEvent(this)" class="delEventBtn btn btn-danger" value="Delete"/>
+            <?php } ?>
+            </div>
         <?php } ?>
-        </ul>
     <?php }
 }
 
 /*
  * Add event to date
  */
-function addEvent($date,$title){
-    //Include db configuration file
-    $currentDate = date("Y-m-d H:i:s");
-    //Insert the event data into database
+function addEvent($date,$name,$startTime,$endTime,$desc) {
     $conn = db_connect();
-    $insert = $conn->query("INSERT INTO Events (Name,Date,Modified) VALUES ('".$title."','".$date."','".$currentDate."')");
+    $insert = $conn->prepare("INSERT INTO Events (Name,Date,StartTime,EndTime,Description) VALUES (:name,:date,:startTime,:endTime,:desc)");
+    $insert->bindParam(":name", $name, PDO::PARAM_STR);
+    $insert->bindParam(":date", $date, PDO::PARAM_STR);
+    $insert->bindParam(":startTime", $startTime, PDO::PARAM_STR);
+    $insert->bindParam(":endTime", $endTime, PDO::PARAM_STR);
+    $insert->bindParam(":desc", $desc, PDO::PARAM_STR);
+    $insert->execute();
     if ($insert) {
+        echo 'ok';
+    }
+    else {
+        echo 'err';
+    }
+}
+
+function editEvent($id,$date,$name,$startTime,$endTime,$desc){
+    $conn = db_connect();
+    $update = $conn->prepare('UPDATE Events SET Name = :name, Date = :date, StartTime = :startTime, EndTime = :endTime, Description = :desc WHERE Id = :id');
+    $update->bindParam(":name", $name, PDO::PARAM_STR);
+    $update->bindParam(":date", $date, PDO::PARAM_STR);
+    $update->bindParam(":startTime", $startTime, PDO::PARAM_STR);
+    $update->bindParam(":endTime", $endTime, PDO::PARAM_STR);
+    $update->bindParam(":desc", $desc, PDO::PARAM_STR);
+    $update->bindParam(":id", $id, PDO::PARAM_INT);
+    $update->execute();
+    if ($update) {
+        echo 'ok';
+    }
+    else {
+        echo 'err';
+    }
+}
+
+function deleteEvent($id){
+    $conn = db_connect();
+    $delete = $conn->prepare("DELETE FROM Events WHERE Id = :id");
+    $delete->bindParam(":id", $id, PDO::PARAM_INT);
+    $delete->execute();
+
+    if ($delete) {
         echo 'ok';
     }
     else {
@@ -265,6 +305,11 @@ function addEvent($date,$title){
 function formatTimeString($rawString) {
     $time = date_create($rawString);
     return date_format($time,'g:i A');
+}
+
+function formatTimeStringForDatabase($rawString) {
+    $time = date_create($rawString);
+    return date_format($time,'H:i:s');
 }
 
 function formatDateString($rawString) {
