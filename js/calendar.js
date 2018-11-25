@@ -28,6 +28,11 @@ function getEvents(date){
 function addEvent(date){
     $('#eventDate').val(date);
     $('#eventDateView').html(date);
+    $('#eventTitle').val("");
+    $('#eventStart').val("");
+    $('#eventEnd').val("");
+    $('#eventDesc').val("");
+    $('#eventId').val("");
     $('#addEventBtn').val("Add");
     $('#event_list').slideUp('slow');
     $('#event_add').slideDown('slow');
