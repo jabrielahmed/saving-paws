@@ -1,0 +1,64 @@
+.previous-pet-item, .previous-pet-radio {
+    margin-right: 10px;
+    width: 120px;
+}
+
+.previous-pet-label {
+    margin-bottom: 10px;
+    width: 130px;
+}
+
+.previous-pet-radio {
+    margin-left: 5px;
+}
+
+.spay-neuter {
+    margin-left: 0px;
+}
+
+.previous-pet-item, .previous-pet-radio {
+    display: inline-block;
+}
+
+.previous-pet-sex {
+    width: 100px;
+    margin-left: 20px;
+}
+
+label {
+    font-weight: normal;
+}
+
+.label-question {
+    font-weight: bold;
+}
+
+.col-xs-12 {
+    margin-bottom: 20px;
+}
+
+input[type=radio] + label {
+    margin-right: 10px;
+    margin-left: 5px;
+}
+
+.col-3 {
+    width: 25%;
+    float: left;
+    margin-right: 20px;
+}
+
+.col-4 {
+    width: 33%;
+    float: left;
+    margin-right: 20px;
+}
+
+.is-valid {
+    background-color: #fff;
+}
+
+.is-invalid {
+    background-color: #ffd6cc;
+    border: 2px solid red;
+}
