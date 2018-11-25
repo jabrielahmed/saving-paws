@@ -4,7 +4,7 @@
  */
 include '/var/www/students/lorenk45/saving-paws/saving-paws/database/database.php';
 date_default_timezone_set("America/Chicago");
-$_SESSION["role"] = "admin";
+$_SESSION["role"] = "";
 /*
  * Function requested by Ajax
  */
@@ -97,20 +97,20 @@ function getCalender($year = '',$month = '')
                         $result = $conn->query("SELECT Name FROM Events WHERE Date = '".$currentDateForDatabase."' AND Status = 1");
                         $eventNum = $result->rowCount();
                         //Define date cell color
-                        if(strtotime($currentDate) == strtotime(date("Y-m-d"))){
-                            echo '<li date="'.$currentDate.'" class="grey date_cell">';
-                        }elseif($eventNum > 0){
-                            echo '<li date="'.$currentDate.'" class="light_sky date_cell">';
-                        }else{
-                            echo '<li date="'.$currentDate.'" class="date_cell">';
-                        }
-                        //Date cell
-                        echo '<span>';
-                        echo $dayCount;
-                        echo '</span>';
+                        if(strtotime($currentDate) == strtotime(date("Y-m-d"))){ ?>
+                            <li class="grey date_cell">
+                        <?php }elseif($eventNum > 0){ ?>
+                            <li class="light_sky date_cell">
+                        <?php }else{ ?>
+                            <li class="date_cell">
+                        <?php } ?>
 
-                        //Hover event popup
-                        if ($eventNum > 0 || isset($_SESSION["role"]) && $_SESSION["role"] == "admin") {
+                        <input class="hidden" value="<?=$currentDate?>" />
+
+                        <!--Date cell-->
+                        <span><?=$dayCount?></span>
+
+                        <?php if ($eventNum > 0 || isset($_SESSION["role"]) && $_SESSION["role"] == "admin") {
                         echo '<div id="date_popup_'.$currentDate.'" class="date_popup_wrap none">';
                         echo '<div class="date_window">';
 
@@ -165,7 +165,7 @@ function getCalender($year = '',$month = '')
 
         $(document).ready(function(){
             $('.date_cell').mouseenter(function(){
-                date = $(this).attr('date');
+                date = $(this).find('input').val();
                 $(".date_popup_wrap").fadeOut();
                 $("#date_popup_"+date).fadeIn();
             });
@@ -238,7 +238,7 @@ function getEvents($date = ''){
                 <input class="hidden eventListingId" value="<?=$Id?>" />
                 Event: <span class="eventListingName"><?=$name?></span><br>
                 Date: <span class="eventListingDate"><?=$date?></span><br>
-                Time: <span class="eventListingStart"><?=$startTime?></span> - <span class="eventListingEnd"><?=formatTimeString($row['EndTime'])?></span><br>
+                Time: <span class="eventListingStart"><?=$startTime?></span> - <span class="eventListingEnd"><?=$endTime?></span><br>
                 Description: <span class="eventListingDesc"><?=$desc?></span><br>
 
             <?php if ($_SESSION["role"] == "admin") { ?>
