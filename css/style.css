@@ -59,7 +59,7 @@
 	font-family: "font-awesome";
 	src: url('../font/font-awesome/fonts/fontawesome-webfont.ttf');
 	src: url('../font/font-awesome/fonts/fontawesome-webfont.eot'), /*IE9 Compat Modes*/
-		 url('../font/font-awesome/fonts/fontawesome-webfont.woff') format ('woff'), /* Pretty Modern Browsers */
+		 url('../font/font-awesome/fonts/fontawesome-webfont.woff') format ('woff') /* Pretty Modern Browsers */
 		 url('../font/font-awesome/fonts/fontawesome-webfont.woff2') format ('woff2'), /* Super Modern Browsers */
 		 url('../font/font-awesome/fonts/fontawesome-webfont.svg') format ('svg'), /* Legacy iOS */
 }
@@ -557,16 +557,17 @@ img, .banner-bottom-item:before, .client-slider .opacity .item .text:after, .cli
 	line-height: 35px;
 	color: #5f5e5e;
 }
-.we-are-my-pet-section .we-are-my-pet-text>a {
-	display: block;
-	width: 196px;
-	line-height: 50px;
-	text-align: center;
-	background: #e53031;
-	color: #fff;
-	text-transform: uppercase;
-	border-radius: 25px;
-	margin-top: 45px;
+.we-are-my-pet-section .we-are-my-pet-text p a {
+    color: #e53031;
+    text-transform: uppercase;
+    border-radius: 25px;
+    margin-top: 5px;
+}
+.we-are-my-pet-section .we-are-my-pet-text > a {
+    color: #e53031;
+    text-transform: uppercase;
+    border-radius: 25px;
+    margin-top: 5px;
 }
 .we-are-my-pet-section .we-are-my-pet-img {overflow: hidden; position: relative;}
 .we-are-my-pet-section .we-are-my-pet-img>img {width: 100%;}
@@ -587,25 +588,25 @@ img, .banner-bottom-item:before, .client-slider .opacity .item .text:after, .cli
 .them-title>h2 {margin-top: 15px;}
 .them-title>p {font-size: 18px; max-width: 700px; margin: 7px auto 0; color: #737373;}
 /*============================= Our Pet Services =========================*/
-.our-pet-services {margin-top: 74px;}
-.our-pet-services .our-pet-services-item {overflow: hidden; margin-bottom: 65px;}
-.our-pet-services .our-pet-services-item .our-pet-services-img {overflow: hidden;}
+/*.our-pet-services {margin-top: 74px;}*/
+.our-pet-services .our-pet-services-item { background: #fff; box-shadow: 5px 5px 20px #ccc; 
+	border-radius: 10px; margin-bottom: 30px; }
+.our-pet-services .our-pet-services-item .our-pet-services-img {overflow: hidden; border-radius: 10px 10px 0 0;}
 .our-pet-services .our-pet-services-item .our-pet-services-img>img {width: 100%;}
 .our-pet-services .our-pet-services-item:hover .our-pet-services-img>img {
 	-webkit-transform: scale3D(1.1,1.1,1);
     transform: scale3D(1.1,1.1,1);
 }
 .our-pet-services .our-pet-services-item .our-pet-services-text {
-	padding: 42px 0 15px; 
-	border-bottom: solid 1px #dcdcdc; 
+	padding: 20px 0 20px; 
 	text-align: center;
-	min-height: 210px;
 }
 .our-pet-services .our-pet-services-item:hover .our-pet-services-text {border-color: #e53031;}
 .our-pet-services .our-pet-services-item .our-pet-services-text>h5>a {
-	text-transform: uppercase; 
+	text-transform: capitalize; 
 	color: #121212; 
-	font-weight: 600;
+	font-weight: 300;
+	font-size: 18px;
 }
 .our-pet-services .our-pet-services-item:hover .our-pet-services-text>h5>a {color: #e53031;}
 .our-pet-services .our-pet-services-item .our-pet-services-text>p {margin-top: 30px; color: #737373;}
@@ -1190,6 +1191,7 @@ footer .bottom-footer form button {
 	overflow: hidden !important; 
 	position: relative; 
 	margin-bottom: 30px;
+	max-height: 225px;
 }
 .gallery-tiem-wrapper>img {width: 100%;}
 .gallery-tiem-wrapper .gallery-item-opact {
@@ -2372,3 +2374,126 @@ footer .bottom-footer form button {
 	background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 80%);
 }
 /*-------------------------------------------------------------------------------------------------------------*/
+
+#con {
+    background: #00419D;
+    padding: 1.2em;
+    border-radius: 15px;
+    color: #fff;
+	text-align: center;
+}
+
+#con > p {
+    line-height: 1;
+    margin: 1.5em auto;
+}
+
+.con {
+    background: #00419D;
+    padding: 1.2em;
+    border-radius: 15px;
+    color: #fff;
+	text-align: center;
+}
+
+.con > h5 {
+    line-height: 1;
+    margin: 1.5em auto;
+}
+
+.heading-bg {
+    background: #e53031;
+    padding: 1em 1.5em;
+    border-radius: 5px;
+    color: #fff;
+}
+.heading-bg a, .heading-bg p, .heading-bg h5 {
+    color: #fff;
+}
+.first-pet {
+    text-align: center;
+    background: #00419D;
+    border-top: 10px solid #e53031;
+    padding: 1.5em;
+}
+.first-pet h3 { color: #fff; margin-bottom: 2%; }
+.listing { list-style: disc; padding-left: 35px; }
+.col-sm-2.pay-ment {
+    background: #00419D;
+    color: #fff;
+    text-align: center;
+    padding: 1.5em;
+	border-radius: 10px;
+}
+.col-sm-2.pay-ment h3 {
+    color: #fff;
+}
+.btn-dan {
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+    padding: .1em 1.5em;
+    margin-left: 15px;
+}
+
+/***** Gallery *****/
+
+.rot-gal { position: relative; }
+#carousel{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    animation: rotation 20s infinite linear;
+}
+#carousel:hover{
+    animation-play-state: paused;
+}
+#carousel figure{
+    display: block;
+    position: absolute;
+    width: 90%;
+    height: 78%;
+    left: 10px;
+    top: 10px;
+    background: black;
+    overflow: hidden;
+    border: solid 5px black;
+}
+#carousel figure:nth-child(1){transform: rotateY(0deg) translateZ(288px);}
+#carousel figure:nth-child(2){ transform: rotateY(40deg) translateZ(288px);}
+#carousel figure:nth-child(3){ transform: rotateY(80deg) translateZ(288px);}
+#carousel figure:nth-child(4){ transform: rotateY(120deg) translateZ(288px);}
+#carousel figure:nth-child(5){ transform: rotateY(160deg) translateZ(288px);}
+#carousel figure:nth-child(6){ transform: rotateY(200deg) translateZ(288px);}
+#carousel figure:nth-child(7){ transform: rotateY(240deg) translateZ(288px);}
+#carousel figure:nth-child(8){ transform: rotateY(280deg) translateZ(288px);}
+#carousel figure:nth-child(9){ transform: rotateY(320deg) translateZ(288px);}
+#carousel figure:nth-child(10){ transform: rotateY(360deg) translateZ(288px);}
+#carousel img{
+    -webkit-filter: grayscale(1);
+    cursor: pointer;
+    transition: all .5s ease;
+    width: 90%;
+}
+#carousel img:hover{
+    -webkit-filter: grayscale(0);
+    transform: scale(1.2,1.2);
+}
+@keyframes rotation{
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(360deg);
+    }
+}
+.donate {
+    background: rgba(255, 0, 0, 1);
+    padding: 5px 25px;
+    border-radius: 50px;
+}
+.donate:hover {
+    color:#fff !important;
+	background: rgba(255, 0, 0, 0.85);
+}
