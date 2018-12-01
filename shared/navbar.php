@@ -2,6 +2,7 @@
 
 <body>
 <?php session_start(); ?>
+<?php ob_start(); ?>
 <div class="main-page-wrapper">
 
     <!-- Header _________________________________ -->
@@ -46,6 +47,7 @@
                                         <li><a href="events.php" class="tran3s">Events</a></li>
                                         <li><a href="paw-challenge.php" class="tran3s">Paw Print Challenge</a></li>
                                         <li><a href="open-houses.php" class="tran3s">Open Houses</a></li>
+                                        <li><a href="s-p-a-r-k-e-d-program.php" class="tran3s">S.P.A.R.K.E.D Program</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropdown-holder"><a href="#">Adoptions</a>
@@ -55,11 +57,6 @@
                                         <li><a href="dogs.php" class="tran3s">Dogs</a></li>
                                         <li><a href="our-special-needs-pets.php" class="tran3s">Our Special Needs Pets</a></li>
                                         <li><a href="adoption-applications.php" class="tran3s">Adoption Applications</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown-holder"><a href="#">S.P.A.R.K.E.D</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="s-p-a-r-k-e-d-program.php" class="tran3s">S.P.A.R.K.E.D Program</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropdown-holder"><a href="#">Help Saving Paws</a>
@@ -84,6 +81,23 @@
                                         <li><a href="happy-tails.php" class="tran3s">Happy Tails</a></li>
                                     </ul>
                                 </li>
+                                <?php if(isset($_SESSION["username"])) { ?>
+                                    <li class="dropdown-holder"><a href="#">Account</a>
+                                        <ul class="sub-menu">
+                                            <?php if($_SESSION["role"] == "admin") { ?>
+                                                <li><a href="applications.php" class="tran3s">Applications</a></li>
+                                                <li><a href="users.php" class="tran3s">Users</a></li>
+                                            <?php } ?>
+                                            <?php if ($_SESSION["role"] == "admin" || $_SESSION["role"] == "seo" ) { ?>
+                                                <li><a href="events.php" class="tran3s">Events</a></li>
+                                            <?php } ?>
+                                            <li><a href="logout.php" class="tran3s">Logout</a></li>
+                                        </ul>
+                                    </li>
+                                <?php } else { ?>
+                                    <li class="dropdown-holder"><a href="login.php">Login</a>
+                                <?php } ?>
+
                             </ul>
                         </div>
                         <!-- /.navbar-collapse -->

@@ -4,7 +4,6 @@
  */
 include '/var/www/students/lorenk45/saving-paws/saving-paws/database/database.php';
 date_default_timezone_set("America/Chicago");
-$_SESSION["role"] = "";
 /*
  * Function requested by Ajax
  */
@@ -118,7 +117,7 @@ function getCalender($year = '',$month = '')
 
                         echo ($eventNum > 0)?'<a href="javascript:;" onclick="getEvents(\''.$currentDateForDatabase.'\');">view events</a><br/>':'';
                         //For Add Event
-                        if (isset($_SESSION["role"]) && $_SESSION["role"] == "admin") {
+                        if (isset($_SESSION["role"]) && ($_SESSION["role"] == "admin" || $_SESSION["role"] == "seo")) {
                             echo '<a href="javascript:;" onclick="addEvent(\''.$currentDate.'\');">add event</a>';
                         }
                         echo '</div></div>';
@@ -241,7 +240,7 @@ function getEvents($date = ''){
                 Time: <span class="eventListingStart"><?=$startTime?></span> - <span class="eventListingEnd"><?=$endTime?></span><br>
                 Description: <span class="eventListingDesc"><?=$desc?></span><br>
 
-            <?php if ($_SESSION["role"] == "admin") { ?>
+            <?php if (isset($_SESSION["role"]) && ($_SESSION["role"] == "admin" || $_SESSION["role"] == "seo")) { ?>
                 <button type="button" onClick="editEvent(this)" class="editEventBtn btn btn-primary" value="Edit">Edit</button>
                 <input type="button"onClick="deleteEvent(this)" class="delEventBtn btn btn-danger" value="Delete"/>
             <?php } ?>
