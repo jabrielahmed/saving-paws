@@ -15,15 +15,15 @@
       <div data-src="images/home/banner-slider-2.jpg">
         <div class="camera_caption">
           <div class="container text-center">
-            <h1 class="wow fadeInUp animated" data-wow-delay="0.2s">Love your Pet, Care Pet</h1>
-            <span class="wow fadeInUp animated" data-wow-delay="0.5s"> With over 15  years of Experience </span>
-            <p class="wow fadeInUp animated" data-wow-delay="0.8s">Pet Care services and best quality Pet for your Home</p>
-            <a href="#" class="tran3s wow fadeInRight animated banner-button-right" data-wow-delay="1s">Get Pet</a> </div>
+            <h1 class="wow fadeInUp animated" data-wow-delay="0.2s">Where Pets Find Their People</h1>
+			      <span class="wow fadeInUp animated" data-wow-delay="0.5s"> Over 15  years in the business </span>
+            <p class="wow fadeInUp animated" data-wow-delay="0.8s">Thousands of adoptable pets are looking for people. People Like You</p>
+            <a href="#" class="tran3s wow fadeInRight animated banner-button-right" data-wow-delay="1s">Learn More!</a> </div>
           <!-- /.container --> 
         </div>
         <!-- /.camera_caption --> 
       </div>
-      <div data-src="images/home/banner-slider-1.jpg">
+      <div data-src="images/home/banner-slider-3.jpg">
         <div class="camera_caption">
           <div class="container text-center">
             <h1 class="wow fadeInUp animated" data-wow-delay="0.2s">Love your Pet, Care Pet</h1>
@@ -159,4 +159,5 @@
     <!-- /.opacity --> 
   </div>
   <!-- /.client-slider --> 
+
 <?php include("shared/footer.php");?>
