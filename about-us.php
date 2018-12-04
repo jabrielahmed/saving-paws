@@ -44,14 +44,14 @@
               <p>We received our official 501(c)(3) letter in September, 2006.</p>
               <p>We typically have 50 to 75 cats and kittens at our shelter at any given time.  Our dogs are kept in foster homes.</p>
               <p>The   pets we help come from many areas. We Help many kitties who are rescued from farms or found abandoned. We also help people who need to surrender their pets because they can no longer care for them. We try to help as many people and pets as we can, but we often have waiting list.</p><br>
-				<div class="col-sm-3 col-sm-offset-3"><div class="img-thumbnail"><img src="images/eadf41_1f00f77f28ad4e6cb84f412f55b08a58.jpg" /></div></div>
-				<div class="col-sm-4"><div class="img-thumbnail"><img src="images/eadf41_80e367bb1c774ea9b7f1107fcad9a7a3.jpg" /></div></div>
+				<div class="col-sm-3 col-sm-offset-3"><div class="img-thumbnail"><img src="images/eadf41_1f00f77f28ad4e6cb84f412f55b08a58.jpg" alt="" /></div></div>
+				<div class="col-sm-4"><div class="img-thumbnail"><img src="images/eadf41_80e367bb1c774ea9b7f1107fcad9a7a3.jpg" alt="" /></div></div>
 				<div class="clearfix"></div>
 				<h3>NAOMI'S Story</h3>
 				<p>We saved this beautiful girl from a high kill shelter who took awhile to make her way to us due to some concerning health issues. During this short time she lost so much… the use of her back legs, much weight, muscle, and endurance. But what she didn’t lose was her spirit. She’s come a long way from being paralyzed, to being a happy pup who can now walk and run. If it wasn’t for rescue, she wouldn’t be alive today. She’s an inspiration to all of us and will make a family very happy.  Naomi has been adopted and is living happily in her furever home.</p><br>
 				<div class="row">
-					<div class="col-sm-5 col-sm-offset-1"><div class="img-thumbnail"><img src="images/eadf41_f825015d30654d349c94f0f2dfc079ce.jpg" /></div></div>
-				<div class="col-sm-5"><div class="img-thumbnail"><img src="images/eadf41_4c6b6235a1aa4c26bd3c8393f0d790f9.jpg" /></div></div>
+					<div class="col-sm-5 col-sm-offset-1"><div class="img-thumbnail"><img src="images/eadf41_f825015d30654d349c94f0f2dfc079ce.jpg" alt="" /></div></div>
+				<div class="col-sm-5"><div class="img-thumbnail"><img src="images/eadf41_4c6b6235a1aa4c26bd3c8393f0d790f9.jpg" alt="" /></div></div>
 				</div>
             </div>
           </div>

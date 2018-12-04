@@ -23,7 +23,7 @@
     <div class="inner-banner-bottom">
       <div class="container">
         <ul>
-          <li><a href="index.php">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><span>-</span></li>
           <li><a href="#">About Us</a></li>
         </ul>
@@ -36,7 +36,7 @@
         <div class="col-md-12">
           <div class="we-are-my-pet-text"> <span><br>
             </span>
-            <div class="col-sm-10"><br /><h2>Our Future Plans</h2></div><div class="col-sm-2"><img src="images/eadf41_8ed66e7f6d3c49e9a26b846e322e1a39.jpg" /></div>
+            <div class="col-sm-10"><br /><h2>Our Future Plans</h2></div><div class="col-sm-2"><img src="images/eadf41_8ed66e7f6d3c49e9a26b846e322e1a39.jpg" alt="" /></div>
             <div class="text">
               <p>Part   of our mission is to help special needs pets. Our philosophy is that   ALL pets are worth saving, even if they have behavioral or health   problems. Which is why our future plans include building separate   shelter areas for a variety of special needs pets who would otherwise be   euthanized. We intend to construct safe, secure, forever housing for   these pets, including: </p>
               <p>•   Cats who spray or urinate outside the litterbox: this is a common   problem with male cats who are marking their territory. Most of the time   this behavior can be corrected with neuter surgery or changes in the   home environment to correct the stimulus, but sometimes the kitty will   continue to spray.</p>

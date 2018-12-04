@@ -22,7 +22,7 @@
     <div class="inner-banner-bottom">
       <div class="container">
         <ul>
-          <li><a href="index.php">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><span>-</span></li>
           <li><a href="#">Help Saving Paws</a></li>
         </ul>
@@ -38,12 +38,140 @@
 		    <div>
 			    <p>We   rely entirely on volunteers to care for the homeless, abandoned,   injured and special needs pets we shelter. We are in constant need of   volunteers to help in a variety of areas - please see below for the   types of opportunities available as well as other important information   regarding volunteer requirements.</p>
 			    <p>Become a Saving Paws volunteer in three steps:</p>
-			    <p>1. <a href="https://www.volunteermatters.net/vm/SelfRegister.do?owner=spar" target="_blank" data-content="https://www.volunteermatters.net/vm/SelfRegister.do?owner=spar" data-type="external">Submit an application here!</a></p>
-			    <p>2. Email <a href="mailto:volunteers@savingpaws.com?subject=Volunteer%20Orientation" target="_self" data-content="volunteers@savingpaws.com" data-type="mail">volunteers@savingpaws.com</a> to schedule an orientation.</p>
+			    <p>1. <a href="https://www.volunteermatters.net/vm/SelfRegister.do?owner=spar" target="_blank" data-content="https://www.volunteermatters.net/vm/SelfRegister.do?owner=spar" >Submit an application here!</a></p>
+			    <p>2. Email <a href="mailto:volunteers@savingpaws.com" target="_self" data-content="volunteers@savingpaws.com" data-type="mail">volunteers@savingpaws.com</a> to schedule an orientation.</p>
 			    <p>3. Attend the orientation, receive training, and start helping!</p>
 			    <p> </p>
-			    <p>To become a volunteer, you&rsquo;ll need to attend a Volunteer Orientation after <a href="https://www.volunteermatters.net/vm/SelfRegister.do?owner=spar" target="_blank" data-content="https://www.volunteermatters.net/vm/SelfRegister.do?owner=spar" data-type="external">submitting an application</a>.   At orientation you&rsquo;ll learn more about how the rescue operates and how   you can help. You&rsquo;ll get a tour of the rescue and learn specific   functions about your area of interest.  There   is additional training required for several volunteer duties, and those   training sessions will be discussed during orientation. Please contact the Volunteer Coodinators at <a href="mailto:volunteers@savingpaws.com?subject=Volunteer%20Orientation" target="_self" data-content="volunteers@savingpaws.com" data-type="mail">volunteers@savingpaws.com</a> to arrange a date and time for orientation.</p>
+			    <p>To become a volunteer, you&rsquo;ll need to attend a Volunteer Orientation after <a href="https://www.volunteermatters.net/vm/SelfRegister.do?owner=spar" target="_blank" data-content="https://www.volunteermatters.net/vm/SelfRegister.do?owner=spar" >submitting an application</a>.   At orientation you&rsquo;ll learn more about how the rescue operates and how   you can help. You&rsquo;ll get a tour of the rescue and learn specific   functions about your area of interest.  There   is additional training required for several volunteer duties, and those   training sessions will be discussed during orientation. Please contact the Volunteer Coodinators at <a href="mailto:volunteers@savingpaws.com" target="_self" data-content="volunteers@savingpaws.com" data-type="mail">volunteers@savingpaws.com</a> to arrange a date and time for orientation.</p>
 		    </div>
+			  
+			<div class="gallery-v-one">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-4 col-xs-6 gallery-item-width">
+                          <div class="gallery-tiem-wrapper"> <img src="images/gallery/vol-1.jpg" alt="image">
+                            <div class="gallery-item-opact">
+                              <h5>PET ADOPTION</h5>
+                              <div> <a href="images/gallery/vol-1.jpg" class="fancybox"><i class="flaticon-search"></i></a> <a href="images/gallery/vol-1.jpg" class="fancybox"></a> </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-xs-6 gallery-item-width">
+                          <div class="gallery-tiem-wrapper"> <img src="images/gallery/vol-2.jpg" alt="image">
+                            <div class="gallery-item-opact">
+                              <h5>PET ADOPTION</h5>
+                              <div> <a href="images/gallery/vol-2.jpg" class="fancybox"><i class="flaticon-search"></i></a> <a href="images/gallery/vol-2.jpg" class="fancybox"></a> </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-xs-6 gallery-item-width">
+                          <div class="gallery-tiem-wrapper"> <img src="images/gallery/vol-3.jpg" alt="image">
+                            <div class="gallery-item-opact">
+                              <h5>PET ADOPTION</h5>
+                              <div> <a href="images/gallery/vol-3.jpg" class="fancybox"><i class="flaticon-search"></i></a> <a href="images/gallery/vol-3.jpg" class="fancybox"></a> </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-xs-6 gallery-item-width">
+                          <div class="gallery-tiem-wrapper"> <img src="images/gallery/vol-4.jpg" alt="image">
+                            <div class="gallery-item-opact">
+                              <h5>PET ADOPTION</h5>
+                              <div> <a href="images/gallery/vol-4.jpg" class="fancybox"><i class="flaticon-search"></i></a> <a href="images/gallery/vol-4.jpg" class="fancybox"></a> </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-xs-6 gallery-item-width">
+                          <div class="gallery-tiem-wrapper"> <img src="images/gallery/vol-5.jpg" alt="image">
+                            <div class="gallery-item-opact">
+                              <h5>PET ADOPTION</h5>
+                              <div> <a href="images/gallery/vol-5.jpg" class="fancybox"><i class="flaticon-search"></i></a> <a href="images/gallery/vol-5.jpg" class="fancybox"></a> </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-xs-6 gallery-item-width">
+                          <div class="gallery-tiem-wrapper"> <img src="images/gallery/vol-6.jpg" alt="image">
+                            <div class="gallery-item-opact">
+                              <h5>PET ADOPTION</h5>
+                              <div> <a href="images/gallery/vol-6.jpg" class="fancybox"><i class="flaticon-search"></i></a> <a href="images/gallery/vol-6.jpg" class="fancybox"></a> </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-xs-6 gallery-item-width">
+                          <div class="gallery-tiem-wrapper"> <img src="images/gallery/vol-7.jpg" alt="image">
+                            <div class="gallery-item-opact">
+                              <h5>PET ADOPTION</h5>
+                              <div> <a href="images/gallery/vol-7.jpg" class="fancybox"><i class="flaticon-search"></i></a> <a href="images/gallery/vol-7.jpg" class="fancybox"></a> </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-xs-6 gallery-item-width">
+                          <div class="gallery-tiem-wrapper"> <img src="images/gallery/vol-8.jpg" alt="image">
+                            <div class="gallery-item-opact">
+                              <h5>PET ADOPTION</h5>
+                              <div> <a href="images/gallery/vol-8.jpg" class="fancybox"><i class="flaticon-search"></i></a> <a href="images/gallery/vol-8.jpg" class="fancybox"></a> </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-xs-6 gallery-item-width">
+                          <div class="gallery-tiem-wrapper"> <img src="images/gallery/vol-9.jpg" alt="image">
+                            <div class="gallery-item-opact">
+                              <h5>PET ADOPTION</h5>
+                              <div> <a href="images/gallery/vol-9.jpg" class="fancybox"><i class="flaticon-search"></i></a> <a href="images/gallery/vol-9.jpg" class="fancybox"></a> </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-xs-6 gallery-item-width">
+                          <div class="gallery-tiem-wrapper"> <img src="images/gallery/vol-10.jpg" alt="image">
+                            <div class="gallery-item-opact">
+                              <h5>PET ADOPTION</h5>
+                              <div> <a href="images/gallery/vol-10.jpg" class="fancybox"><i class="flaticon-search"></i></a> <a href="images/gallery/vol-10.jpg" class="fancybox"></a> </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-xs-6 gallery-item-width">
+                          <div class="gallery-tiem-wrapper"> <img src="images/gallery/vol-11.jpg" alt="image">
+                            <div class="gallery-item-opact">
+                              <h5>PET ADOPTION</h5>
+                              <div> <a href="images/gallery/vol-11.jpg" class="fancybox"><i class="flaticon-search"></i></a> <a href="images/gallery/vol-11.jpg" class="fancybox"></a> </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-xs-6 gallery-item-width">
+                          <div class="gallery-tiem-wrapper"> <img src="images/gallery/vol-12.jpg" alt="image">
+                            <div class="gallery-item-opact">
+                              <h5>PET ADOPTION</h5>
+                              <div> <a href="images/gallery/vol-12.jpg" class="fancybox"><i class="flaticon-search"></i></a> <a href="images/gallery/vol-12.jpg" class="fancybox"></a> </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-xs-6 gallery-item-width">
+                          <div class="gallery-tiem-wrapper"> <img src="images/gallery/vol-13.jpg" alt="image">
+                            <div class="gallery-item-opact">
+                              <h5>PET ADOPTION</h5>
+                              <div> <a href="images/gallery/vol-13.jpg" class="fancybox"><i class="flaticon-search"></i></a> <a href="images/gallery/vol-13.jpg" class="fancybox"></a> </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-xs-6 gallery-item-width">
+                          <div class="gallery-tiem-wrapper"> <img src="images/gallery/vol-14.jpg" alt="image">
+                            <div class="gallery-item-opact">
+                              <h5>PET ADOPTION</h5>
+                              <div> <a href="images/gallery/vol-14.jpg" class="fancybox"><i class="flaticon-search"></i></a> <a href="images/gallery/vol-14.jpg" class="fancybox"></a> </div>
+                            </div>
+                          </div>
+                        </div>
+						  <div class="col-md-4 col-xs-6 gallery-item-width">
+                          <div class="gallery-tiem-wrapper"> <img src="images/gallery/vol-15.jpg" alt="image">
+                            <div class="gallery-item-opact">
+                              <h5>PET ADOPTION</h5>
+                              <div> <a href="images/gallery/vol-15.jpg" class="fancybox"><i class="flaticon-search"></i></a> <a href="images/gallery/vol-15.jpg" class="fancybox"></a> </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>			  
+			  
 		    <h3>Volunteer at the Rescue</h3>
               <h3>Onsite Volunteers</h3>
               <p>This volunteer opportunity is hands-on with our   rescued animals. Responsibilities include refreshing food and water,   scooping litter   boxes, changing newspaper and linens in the cages,   etc.  Cleaning dog kennels, walking and playing with dogs.  You will   also help with keeping the rescue itself clean by loading/unloading the   dishwasher, doing laundry, sweeping, mopping, etc.</p>
@@ -66,9 +194,9 @@
                 </li>
               </ul>
               <h3>Rescue Maintenance</h3>
-              <p>Are you handy? Use your skills to save homeless pets! Not too long ago we found a great new location with a house and three   huge barns in the back that we are turning into kennels, runs, a   veterinary area, multiple cat rooms, and more!!! We are looking for   animal lovers who want to help complete our rescue! Please email 
-                  <a href="mailto:volunteers@savingpaws.com">volunteers@savingpaws.com</a>
-                if you are interested in helping with a little light (or heavy) construction work. Our Maintenance Coordinator is looking to create a   team of go-to people to contact when we need work done around the   rescue, both skilled handy work and general maintenance. </p>
+              <p>Are you handy? Use your skills to save homeless pets!   Not too long ago we found a great new location with a house and three   huge barns in the back that we are turning into kennels, runs, a   veterinary area, multiple cat rooms, and more!!! We are looking for   animal lovers who want to help complete our rescue! Please email 
+                  <a data-auto-recognition="true" data-content="volunteers@savingpaws.com" href="mailto:volunteers@savingpaws.com" data-type="mail">volunteers@savingpaws.com</a>
+                if   you are interested in helping with a little light (or heavy)   construction work. Our Maintenance Coordinator is looking to create a   team of go-to people to contact when we need work done around the   rescue, both skilled handy work and general maintenance. </p>
               <h3>We often need volunteers for various projects:</h3>
               <ul class="listing">
                 <li>
@@ -115,9 +243,7 @@
                 </li>
               </ul>
               <p>If you are or know anyone that has these talents or is able to assist please
-                <object height="0">
                   <a data-auto-recognition="true" data-content="e-mailvolunteers@savingpaws.com" href="mailto:e-mailvolunteers@savingpaws.com" data-type="mail">e-mailvolunteers@savingpaws.com</a>
-                </object>
                 and let us know what you can help with so we can e-mail this group for help when it is needed. Thank you!</p>
               <h3>Adoption Events</h3>
               <p>Volunteer 2-4 hours one Saturday or Sunday a month to   visit a store with adoptable pets and network with the public by   answering questions, collecting adoption applications, volunteer   applications, etc. We have dog and cat adoption events at various   locations. You can contribute to their success by volunteering in any of   these ways:</p>
@@ -143,9 +269,7 @@
               <p>In addition to transporting dogs and cats to and from adoption events, volunteers transport them to and from vet appointments.</p>
               <h3>Fundraising and Community Outreach</h3>
               <p>Our fundraising committee develops and organizes   fundraising events to raise valuable funds to support our mission. We   need   volunteers at all levels of fundraising, from event staffing to   leadership.  Become a member of our fundraising team and raise much   needed money to help the animals in our care.  Email
-                <object height="0">
                   <a data-auto-recognition="true" data-content="fundraising@savingpaws.com" href="mailto:fundraising@savingpaws.com" data-type="mail">fundraising@savingpaws.com</a>
-                </object>
                 for more information</p>
               <h3>Event Planning</h3>
               <p>You can contribute in any of these areas:</p>

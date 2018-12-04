@@ -23,7 +23,7 @@
     <div class="inner-banner-bottom">
       <div class="container">
         <ul>
-          <li><a href="index.php">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><span>-</span></li>
           <li><a href="#">Thank You</a></li>
         </ul>
@@ -38,7 +38,7 @@
             <h2>Community Partners</h2>
             <p>Our community of volunteers and committed partner organizations provide us with the financial, material, and human support we need to achieve our mission.  Thank you.  We would like to recognize the Petco Foundation for continued financial support.  In addition, we would like to recognize the the following community partners for their support of the 2016 Saving Paws Holiday Miracle - our largest annual fundraiser.  With your help, our 2016 Holiday Miracle was our most successful to-date! </p>
             <h3>2016 Holiday Miracle Major Financial Contributors </h3>
-            <a href="http://www.ornuaingredientsnorthamerica.com/" target="_blank" data-content="http://www.ornuaingredientsnorthamerica.com/" data-type="external" rel="undefined">Ornua Ingredients</a> <a href="https://www.usbank.com/index.html" target="_blank" data-content="https://www.usbank.com/index.html" data-type="external" rel="undefined">US Bank</a> <a href="http://www.twopawsupbakery.com/" target="_blank" data-content="http://www.twopawsupbakery.com/" data-type="external" rel="undefined">Two Paws Up Bakery</a> <a href="https://connect.thrivent.com/troy-beck" target="_blank" data-content="https://connect.thrivent.com/troy-beck" data-type="external" rel="undefined">Troy Beck, Thrivent Financial</a> <a href="https://www.capitalcu.com/" target="_blank" data-content="https://www.capitalcu.com/" data-type="external" rel="undefined">Capital Credit Union</a> <a href="http://allcreatures-appleton.com/" target="_blank" data-content="http://allcreatures-appleton.com/" data-type="external" rel="undefined">All Creatures Animal Hospital</a>
+            <a href="http://www.ornuaingredientsnorthamerica.com/" target="_blank" data-content="http://www.ornuaingredientsnorthamerica.com/">Ornua Ingredients</a> <a href="https://www.usbank.com/index.html" target="_blank" data-content="https://www.usbank.com/index.html">US Bank</a> <a href="http://www.twopawsupbakery.com/" target="_blank" data-content="http://www.twopawsupbakery.com/">Two Paws Up Bakery</a> <a href="https://connect.thrivent.com/troy-beck" target="_blank" data-content="https://connect.thrivent.com/troy-beck">Troy Beck, Thrivent Financial</a> <a href="https://www.capitalcu.com/" target="_blank" data-content="https://www.capitalcu.com/">Capital Credit Union</a> <a href="http://allcreatures-appleton.com/" target="_blank" data-content="http://allcreatures-appleton.com/">All Creatures Animal Hospital</a>
             <h3>2016 Holiday Miracle Contributors</h3>
             <p>Ace Hardware - Appleton<br>
               

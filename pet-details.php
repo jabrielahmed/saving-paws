@@ -23,9 +23,9 @@
     <div class="inner-banner-bottom">
       <div class="container">
         <ul>
-          <li><a href="index.php">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><span>-</span></li>
-          <li><a href="adoptions.php">Adoptions</a></li>
+          <li><a href="adoptions.html">Adoptions</a></li>
           <li><span>-</span></li>
           <li><a href="#">Dogs</a></li>
         </ul>

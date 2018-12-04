@@ -23,7 +23,7 @@
     <div class="inner-banner-bottom">
       <div class="container">
         <ul>
-          <li><a href="index.php">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><span>-</span></li>
           <li><a href="#">About Us</a></li>
         </ul>
@@ -47,12 +47,12 @@
                   <p>N3141 Meade Street<br>
                     Appleton, WI 54913</p>
                   <p>Phone:  (920) 830-2392</p>
-                  <p>Email:   <a href="mailto:info@savingpaws.com">info@savingpaws.com</a> </p>
+                  <p>Email:   <a data-auto-recognition="true" data-content="info@savingpaws.com" href="mailto:info@savingpaws.com" data-type="mail">info@savingpaws.com</a> </p>
                 </div>
               </div>
               <div class="col-sm-4">
                 <div class="form-area">
-                  <form role="form">
+                  <form>
                     <div class="form-group">
                       <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
                     </div>
@@ -66,16 +66,13 @@
                       <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
                     </div>
                     <div class="form-group">
-                      <textarea class="form-control" type="textarea" id="message" placeholder="Message" maxlength="140" rows="7"></textarea>
-                      <span class="help-block">
-                      <p id="characterLeft" class="help-block ">You have reached the limit</p>
-                      </span> </div>
+                      <textarea class="form-control" id="message" placeholder="Message" rows="7"></textarea></div>
                     <button type="button" id="submit" name="submit" class="btn btn-primary pull-right">Submit Form</button>
                   </form>
                 </div>
               </div>
               <div class="col-sm-5">
-                  <iframe scrolling="no" title="Google Maps" aria-label="Google Maps" src="https://static.parastorage.com/services/santa/1.5597.4/static/external/googleMap.html?language=en&amp;lat=44.35204299999999&amp;long=-88.39571999999998&amp;address=N3141 Meade St, Appleton, WI 54913, USA&amp;addressInfo=Saving Paws Animal Rescue&amp;showZoom=true&amp;showStreetView=true&amp;showMapType=true" width="100%" height="350" frameborder="0"></iframe>
+                  <iframe title="Google Maps" aria-label="Google Maps" src="https://static.parastorage.com/services/santa/1.5597.4/static/external/googleMap.html?language=en&amp;lat=44.35204299999999&amp;long=-88.39571999999998&amp;address=N3141MeadeSt,Appleton,WI 54913,USA&amp;addressInfo=SavingPawsAnimal Rescue&amp;showZoom=true&amp;showStreetView=true&amp;showMapType=true" width="100%" height="350"></iframe>
               </div>
             </div>
           </div>
