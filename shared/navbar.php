@@ -12,14 +12,12 @@
                 <div class="clear-fix">
                     <ul class="float-left top-header-left">
                         <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i> PO Box 0362, Appleton, WI 54912-0362</a></li>
-                        <li><a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i> info@savingpaws.com</a></li>
+                        <li><a href="mailto:info@savingpaws.com"><i class="fa fa-envelope-o" aria-hidden="true"></i> info@savingpaws.com</a></li>
                         <li><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XJ3QPKD9DL8LE" target="_blank" class="donate">Donate Now</a></li>
                     </ul>
                     <ul class="float-right top-header-right">
-                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-google" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.facebook.com/SavingPawsAnimalRescue/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="https://twitter.com/savingpawsrescu" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
                     </ul>
                 </div>
             </div>
