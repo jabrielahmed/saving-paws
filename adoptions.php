@@ -22,7 +22,7 @@
     <div class="inner-banner-bottom">
       <div class="container">
         <ul>
-          <li><a href="index.php">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><span>-</span></li>
           <li><a href="#">About us</a></li>
         </ul>
@@ -41,14 +41,10 @@
             <h3>How to meet our adoptable pets </h3>
             <p>We   currently do not have regular business hours.  By making an appointment   you&rsquo;ll be able to meet the pet you are interested in. Please understand   that not all of our available pets live at the rescue; some are in   private foster homes.   For more information about meeting or adopting   pets, contact us at: </p>
             <p>For Cats-
-              <object height="0">
                 <a data-auto-recognition="true" data-content="cats@savingpaws.com" href="mailto:cats@savingpaws.com" data-type="mail">cats@savingpaws.com</a>
-              </object>
             </p>
             <p>For Dogs-
-              <object height="0">
                 <a data-auto-recognition="true" data-content="dogs@savingpaws.com" href="mailto:dogs@savingpaws.com" data-type="mail">dogs@savingpaws.com</a>
-              </object>
             </p>
             <h3>To adopt from Saving Paws, just follow these simple steps: </h3>
             <ul>

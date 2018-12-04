@@ -23,7 +23,7 @@
     <div class="inner-banner-bottom">
       <div class="container">
         <ul>
-          <li><a href="index.php">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><span>-</span></li>
           <li><a href="#">Events</a></li>
         </ul>
@@ -38,7 +38,7 @@
             <h2>2017 Paw Print Challenge</h2>
           </div>
 			<div class="col-sm-6"><p>A HUGE THANK YOU to TailWaggers Doggy Daycare on Oneida Street in Menasha for raising the most donations to support Saving Paws Animal Rescue in the 2017 Paw Print Challenge!</p></div>
-			<div class="col-sm-6"><a href="http://www.tailwaggersdoggydaycare.com" target="_blank"><div class="img-thumbnail"><img src="images/648_1888_s_2.jpg" /></div></a></div>
+			<div class="col-sm-6"><a href="http://www.tailwaggersdoggydaycare.com" target="_blank"><div class="img-thumbnail"><img src="images/648_1888_s_2.jpg" alt="" /></div></a></div>
 		</div>
         </div>
       </div>

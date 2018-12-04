@@ -23,7 +23,7 @@
     <div class="inner-banner-bottom">
       <div class="container">
         <ul>
-          <li><a href="index.php">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><span>-</span></li>
           <li><a href="#">Help Saving Paws</a></li>
         </ul>
@@ -46,10 +46,10 @@
                 <br>
 				<div class="col-sm-12">
                 <h4>You Can Be the Bridge Between What Was and What Will Be</h4><div class="clearfix"></div>
-					<div class="img-thumbnail"><img src="images/eadf41_38755bf54eac4673bca588203eb53130.jpg" ></div>
-					<div class="img-thumbnail"><img src="images/eadf41_cf1f621450fc456398b66a34fb2b0f8d.jpg" ></div>
-					<div class="img-thumbnail"><img src="images/eadf41_90861eff60274bf8b23043a66a1d0589.jpg" ></div>
-					<div class="img-thumbnail"><img src="images/eadf41_e84d1b9f3eac473f9f1da011afa4757e.jpg"></div>
+					<div class="img-thumbnail"><img src="images/eadf41_38755bf54eac4673bca588203eb53130.jpg" alt="" ></div>
+					<div class="img-thumbnail"><img src="images/eadf41_cf1f621450fc456398b66a34fb2b0f8d.jpg" alt="" ></div>
+					<div class="img-thumbnail"><img src="images/eadf41_90861eff60274bf8b23043a66a1d0589.jpg" alt="" ></div>
+					<div class="img-thumbnail"><img src="images/eadf41_e84d1b9f3eac473f9f1da011afa4757e.jpg" alt="" ></div>
 				</div>
 				  
                 <p>As   a foster care provider, you provide food, water, training, grooming,   transportation to vet care, and a lot of TLC. Basic knowledge of animal   care and training is a plus. Foster care providers play an important   role in the adoption process. The foster parent is asked to help provide   the final decision if the adopter is the best fit for that pet. You&rsquo;ve   developed a relationship with the foster pet, and Saving Paws values   your input. If you&rsquo;re not comfortable with the adopter/ family, you can   deny their application for any reason. Our application does state that   we are able to refuse any application.</p>

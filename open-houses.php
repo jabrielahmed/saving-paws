@@ -23,7 +23,7 @@
     <div class="inner-banner-bottom">
       <div class="container">
         <ul>
-          <li><a href="index.php">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><span>-</span></li>
           <li><a href="#">Events</a></li>
         </ul>
@@ -38,7 +38,7 @@
             <h2>Open Houses</h2>
           </div>
 			<div class="col-sm-3">
-				<div class="img-thumbnail"><img src="images/30ef8f.jpg" /></div>
+				<div class="img-thumbnail"><img src="images/30ef8f.jpg" alt="" /></div>
 			</div>
 			<div class="col-sm-9">
 			  <p>Join us at Saving Paws Animal Rescue to meet our adoptable animals.  Open Houses are regularly scheduled events that give you the best opportunity to meet and adopt.  Our next Open Houses will be:</p>
