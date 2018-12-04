@@ -56,10 +56,10 @@
                                         <li><a href="cats.php" class="tran3s">Cats</a></li>
                                         <li><a href="dogs.php" class="tran3s">Dogs</a></li>
                                         <li><a href="our-special-needs-pets.php" class="tran3s">Our Special Needs Pets</a></li>
-                                        <li><a href="adoption-applications.php" class="tran3s">Adoption Applications</a></li>
+                                        <li><a href="adoption-form-cat.php" class="tran3s">Cat Adoption Application</a></li>
                                     </ul>
                                 </li>
-                                <li class="dropdown-holder"><a href="#">Help Saving Paws</a>
+                                <li class="dropdown-holder"><a href="#">Help Us</a>
                                     <ul class="sub-menu">
                                         <li><a href="ways-to-give.php" class="tran3s">Ways to Give</a></li>
                                         <li><a href="become-a-rescue-volunteer.php" class="tran3s">Volunteer</a></li>

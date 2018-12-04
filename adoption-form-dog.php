@@ -6,7 +6,7 @@ include("shared/header.php");?>
 <?php include("shared/navbar.php"); ?>
 <div class="container">
     <div class="row">
-        <h1>Cat Adoption Form</h1>
+        <h1>Dog Adoption Form</h1>
     </div>
     <form id="adoption-form.php" onSubmit="return validateForm(this)" method="post">
         <div class="row">
@@ -144,45 +144,45 @@ include("shared/header.php");?>
                 <legend>Pet Information</legend>
                 <div class="row">
                     <div class="col-xs-12">
-                        <label for="cats-chosen" class="label-question">Cat(s) Chosen:</label>
+                        <label for="dogs-chosen" class="label-question">Cat(s) Chosen:</label>
                         First Choice:
-                        <select name="PetChosen1" id="cats-chosen">
-                            <?php foreach (getAllCats() as $cat) { ?>
-                                <option value="<?=$cat["Id"]?>"><?=$cat["Name"]?></option>
+                        <select name="PetChosen1" id="dogs-chosen">
+                            <?php foreach (getAllDogs() as $dog) { ?>
+                                <option value="<?=$dog["Id"]?>"><?=$dog["Name"]?></option>
                             <?php } ?>
                         </select>
 
                         Second Choice:
                         <select name="PetChosen2">
-                            <?php foreach (getAllCats() as $cat) { ?>
-                                <option value="<?=$cat["Id"]?>"><?=$cat["Name"]?></option>
+                            <?php foreach (getAllDogs() as $dog) { ?>
+                                <option value="<?=$dog["Id"]?>"><?=$dog["Name"]?></option>
                             <?php } ?>
                         </select>
                     </div>
                     <div class="col-xs-12">
-                        <br><label for="describe-personality" class="label-question">Describe in detail the type of personality you're looking for in a cat:</label><br>
+                        <br><label for="describe-personality" class="label-question">Describe in detail the type of personality you're looking for in a dog:</label><br>
                         <textarea name="Personality" class="form-control" id="describe-personality"></textarea><br>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-12">
-                        <div class="form-radio-who-is-cat-for">
-                            <label class="label-question">Who is the cat for?</label><br>
-                            <input type="radio" name="WhoIsPetFor" class="form-check-label" id="who-is-cat-for-me" value="Me" />
-                            <label for="who-is-cat-for-me">Me</label>
-                            <input type="radio" name="WhoIsPetFor" class="form-check-label" id="who-is-cat-for-family" value="My family" />
-                            <label for="who-is-cat-for-family">My family</label>
-                            <input type="radio" name="WhoIsPetFor" class="form-check-label" id="who-is-cat-for-relative" value="Relative" />
-                            <label for="who-is-cat-for-relative">Relative</label>
-                            <input type="radio" name="WhoIsPetFor" class="form-check-label" id="who-is-cat-for-friend" value="Friend" />
-                            <label for="who-is-cat-for-friend">Friend</label><br>
+                        <div class="form-radio-who-is-dog-for">
+                            <label class="label-question">Who is the dog for?</label><br>
+                            <input type="radio" name="WhoIsPetFor" class="form-check-label" id="who-is-dog-for-me" value="Me" />
+                            <label for="who-is-dog-for-me">Me</label>
+                            <input type="radio" name="WhoIsPetFor" class="form-check-label" id="who-is-dog-for-family" value="My family" />
+                            <label for="who-is-dog-for-family">My family</label>
+                            <input type="radio" name="WhoIsPetFor" class="form-check-label" id="who-is-dog-for-relative" value="Relative" />
+                            <label for="who-is-dog-for-relative">Relative</label>
+                            <input type="radio" name="WhoIsPetFor" class="form-check-label" id="who-is-dog-for-friend" value="Friend" />
+                            <label for="who-is-dog-for-friend">Friend</label><br>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="form-radio-indoors-outdoors">
-                            <label class="label-question">Cat will be kept:</label><br>
+                            <label class="label-question">Dog will be kept:</label><br>
                             <input type="radio" name="IndoorsOutdoors" class="form-check-label" id="indoors-outdoors-indoors" value="Me" />
                             <label for="indoors-outdoors-indoors">Indoors</label>
                             <input type="radio" name="IndoorsOutdoors" class="form-check-label" id="indoors-outdoors-outdoors" value="Outdoors" />
@@ -219,7 +219,7 @@ include("shared/header.php");?>
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="form-surrender">
-                            <label class="label-question">Have you ever had to surrender a pet to a shelter?</label><br>
+                            <label class="label-question">Have you ever had to surrender a dog to a shelter?</label><br>
                             <input type="radio" name="Surrendered" class="form-check-label" id="surrender-yes" value="Yes" />
                             <label for="surrender-yes">Yes</label>
                             <input type="radio" name="Surrendered" class="form-check-label" id="surrender-no" value="No" />
@@ -254,14 +254,23 @@ include("shared/header.php");?>
                     </div>
                 </div>
                 <div class="row">
+                    <div class="col-xs-12 form-obedience">
+                        <label class="label-question" for="obedience">Was your last dog obedience trained?</label><br>
+                        <input type="radio" name="Obedience" class="form-check-label" id="obedience-yes" value="Yes" />
+                        <label for="obedience-yes">Yes</label>
+                        <input type="radio" name="Obedience" class="form-check-label" id="obedience-no" value="No" />
+                        <label for="obedience-no">No</label><br>
+                    </div>
+                </div>
+                <div class="row">
                     <div class="col-xs-12 form-why">
-                        <label class="label-question" for="why">Why do you want this cat?</label><br>
+                        <label class="label-question" for="why">Why do you want this dog?</label><br>
                         <textarea class="form-control" name="WhyDoYouWant" id="why"></textarea>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-12 form-allergies">
-                        <label class="label-question" for="allergies">Does any member in your house have allergies to cats?</label><br>
+                        <label class="label-question" for="allergies">Does any member in your house have allergies to dogs?</label><br>
                         <input type="radio" name="Allergies" class="form-check-label" id="allergies-yes" value="Yes" />
                         <label for="allergies-yes">Yes</label>
                         <input type="radio" name="Allergies" class="form-check-label" id="allergies-no" value="No" />
@@ -269,31 +278,121 @@ include("shared/header.php");?>
                     </div>
                 </div>
                 <div class="row">
+                    <div class="col-xs-12 form-someone-home">
+                        <label class="label-question" for="someone-home">Is someone home during the day?</label><br>
+                        <input type="radio" name="SomeoneHome" class="form-check-label" id="someone-home-yes" value="Yes" />
+                        <label for="someone-home-yes">Yes</label>
+                        <input type="radio" name="SomeoneHome" class="form-check-label" id="someone-home-no" value="No" />
+                        <label for="someone-home-no">No</label><br>
+                    </div>
+                </div>
+                <div class="row">
                     <div class="col-xs-12 form-hours">
-                        <label class="label-question" for="hours">How many hours each day will the cat be without human company?</label><br>
+                        <label class="label-question" for="hours">How many hours each day will the dog be without human company?</label><br>
                         <input type="text" class="form-control" name="HoursWithoutHumans" id="hours"><br>
                         <label class="label-question" for="hours-explain">Please explain:</label><br>
                         <textarea type="text" class="form-control" name="HoursWithoutHumansExplain" id="hours-explain"></textarea>
                     </div>
                 </div>
                 <div class="row">
+                    <div class="col-xs-12 form-fence">
+                        <label class="label-question" for="fence">Do you have a completely fenced yard?</label><br>
+                        <input type="radio" name="FencedYard" class="form-check-label" id="fence-yes" value="Yes" />
+                        <label for="fence-yes">Yes</label>
+                        <input type="radio" name="FencedYard" class="form-check-label" id="fence-no" value="No" />
+                        <label for="fence-no">No</label><br>
+                        <div class="explain">
+                            <label class="label-question" for="fence-explain">Please explain:</label><br>
+                            <input type="text" class="form-control" name="FencedYardExplain" id="fence-explain"><br>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 form-tied">
+                        <label class="label-question" for="tied-up">Are there times when the dog will be tied up?</label><br>
+                        <input type="radio" name="TiedUp" class="form-check-label" id="tied-yes" value="Yes" />
+                        <label for="tied-yes">Yes</label>
+                        <input type="radio" name="TiedUp" class="form-check-label" id="tied-no" value="No" />
+                        <label for="tied-no">No</label><br>
+                        <div class="explain">
+                            <label class="label-question" for="tied-explain">Please explain:</label><br>
+                            <input type="text" class="form-control" name="TiedUpExplain" id="tied-explain"><br>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 form-garage">
+                        <label class="label-question" for="tied-up">Will the dog spend any time in the garage?</label><br>
+                        <input type="radio" name="Garage" class="form-check-label" id="garage-yes" value="Yes" />
+                        <label for="garage-yes">Yes</label>
+                        <input type="radio" name="Garage" class="form-check-label" id="garage-no" value="No" />
+                        <label for="garage-no">No</label><br>
+                        <div class="explain">
+                            <label class="label-question" for="garage-explain">Please explain:</label><br>
+                            <input type="text" class="form-control" name="GarageExplain" id="garage-explain"><br>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 form-housebroken">
+                        <label class="label-question" for="housebroken">If your dog/puppy is not housebroken, what method will you use to train it?</label><br>
+                        <textarea type="text" class="form-control" name="Housebroken" id="housebroken"></textarea>
+                    </div>
+                </div>
+                <div class="row">
                     <div class="col-xs-12 form-vaccinations">
-                        <label class="label-question" for="vaccinations">Will you keep the cat up-to-date on vaccinations?</label><br>
+                        <label class="label-question" for="vaccinations">Will you keep the dog up-to-date on vaccinations?</label><br>
                         <input type="radio" name="Vaccinations" class="form-check-label" id="vaccinations-yes" value="Yes" />
-                        <label for="allergies-yes">Yes</label>
+                        <label for="vaccinations-yes">Yes</label>
                         <input type="radio" name="Vaccinations" class="form-check-label" id="vaccinations-no" value="No" />
-                        <label for="allergies-no">No</label><br>
+                        <label for="vaccinations-no">No</label><br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 form-exercise">
+                        <label class="label-question" for="exercise">Will you be able to exercise the dog on a regular basis?</label><br>
+                        <input type="radio" name="Exercise" class="form-check-label" id="exercise-yes" value="Yes" />
+                        <label for="exercise-yes">Yes</label>
+                        <input type="radio" name="Exercise" class="form-check-label" id="exercise-no" value="No" />
+                        <label for="exercise-no">No</label><br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 form-method-exercise">
+                        <label class="label-question" for="method-exercise">What is the method of exercise you plan to use?</label><br>
+                        <textarea class="form-control" name="MethodOfExercise" id="method-exercise"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 form-kept-during-day">
+                        <label class="label-question" for="kept-during-day">Where will this dog be kept during the day?</label><br>
+                        <input type="text" class="form-control" name="KeptDuringDay" id="kept-during-day" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 form-kept-during-night">
+                        <label class="label-question" for="kept-during-night">Where will this dog be kept during the night?</label><br>
+                        <input type="text" class="form-control" name="KeptDuringNight" id="kept-during-night" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 form-pickup">
+                        <label class="label-question" for="pickup">If you drive a pickup truck, would you allow the dog to ride in the back?</label><br>
+                        <input type="radio" name="Pickup" class="form-check-label" id="pickup-yes" value="Yes" />
+                        <label for="pickup-yes">Yes</label>
+                        <input type="radio" name="Pickup" class="form-check-label" id="pickup-no" value="No" />
+                        <label for="pickup-no">No</label><br>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-12 form-vacation">
-                        <label class="label-question" for="Vacation">If you go away for a few days, or on a vacation, who will take care of the cat?</label><br>
+                        <label class="label-question" for="vacation">If you go away for a few days, or on a vacation, who will take care of the dog?</label><br>
                         <textarea type="text" class="form-control" name="Vacation" id="vacation"></textarea>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-12 form-move">
-                        <label class="label-question" for="move">If you move, will you take the cat with you?</label><br>
+                        <label class="label-question" for="move">If you move, will you take the dog with you?</label><br>
                         <input type="radio" name="Move" class="form-check-label" id="move-yes" value="Yes" />
                         <label for="move-yes">Yes</label>
                         <input type="radio" name="Move" class="form-check-label" id="move-no" value="No" />
@@ -305,22 +404,8 @@ include("shared/header.php");?>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xs-12 form-declaw">
-                        <label class="label-question" for="declaw">Will you declaw this cat/kitten?</label><br>
-                        <input type="radio" name="Declaw" class="form-check-label" id="declaw-yes" value="Yes, front only" />
-                        <label for="declaw-yes">Yes</label>
-                        <input type="radio" name="Declaw" class="form-check-label" id="declaw-no" value="No" />
-                        <label for="declaw-no">No</label><br>
-                        <div class="disclaimer">
-                            <p>*Please Note: By signing this form, I agree that I will NOT four-paw declaw. Saving Paws Animal Rescue
-                                does not allow four-paw declawing of any cat adopted from this organization.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
                     <div class="col-xs-12 form-medical-bills">
-                        <label class="label-question" for="medical-bills">How much are you willing to spend on medical bills for your cat?</label><br>
+                        <label class="label-question" for="medical-bills">How much are you willing to spend on medical bills for your dog?</label><br>
                         <input type="text" class="form-control" name="MedicalBills" id="medical-bills" />
                     </div>
                 </div>
@@ -345,7 +430,7 @@ include("shared/header.php");?>
                 </div>
                 <div class="row">
                     <div class="col-xs-12 form-responsibility">
-                        <label class="label-question" for="responsibility">Are you willing to take responsibility for this cat for the next 15 to 20 years?</label><br>
+                        <label class="label-question" for="responsibility">Are you willing to take responsibility for this dog for the next 10 to 15 years?</label><br>
                         <input type="radio" name="Responsibility" class="form-check-label" id="responsibility-yes" value="Yes" />
                         <label for="responsibility-yes">Yes</label>
                         <input type="radio" name="Responsibility" class="form-check-label" id="responsibility-no" value="No" />
@@ -354,7 +439,7 @@ include("shared/header.php");?>
                 </div>
                 <div class="row">
                     <div class="col-xs-12 form-unable">
-                        <label class="label-question" for="unable">What is your plan if you are unable to care for this cat?</label><br>
+                        <label class="label-question" for="unable">What is your plan if you are unable to care for this dog?</label><br>
                         <textarea class="form-control" name="UnableToCare" id="unable" ></textarea>
                     </div>
                 </div>

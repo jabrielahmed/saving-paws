@@ -4,13 +4,17 @@
  */
 include '/var/www/students/lorenk45/saving-paws/saving-paws/database/database.php';
 date_default_timezone_set("America/Chicago");
+
+if(session_id() == '') {
+    session_start();
+}
 /*
  * Function requested by Ajax
  */
 if(isset($_POST['func']) && !empty($_POST['func'])){
     switch($_POST['func']){
-        case 'getCalender':
-            getCalender($_POST['year'],$_POST['month']);
+        case 'getCalendar':
+            getCalendar($_POST['year'],$_POST['month']);
             break;
         case 'getEvents':
             getEvents($_POST['date']);
@@ -34,7 +38,7 @@ if(isset($_POST['func']) && !empty($_POST['func'])){
  * Get calendar full HTML
  */
 
-function getCalender($year = '',$month = '')
+function getCalendar($year = '',$month = '')
 {
     $dateYear = ($year != '')?$year:date("Y");
     $dateMonth = ($month != '')?$month:date("m");
@@ -44,7 +48,7 @@ function getCalender($year = '',$month = '')
     $totalDaysOfMonthDisplay = ($currentMonthFirstDay == 7)?($totalDaysOfMonth):($totalDaysOfMonth + $currentMonthFirstDay);
     $boxDisplay = ($totalDaysOfMonthDisplay <= 35)?35:42;
 ?>
-    <div id="calender_section">
+    <div id="calendar_section">
         <h2>
             <a href="javascript:void(0);" onclick="getCalendar('calendar_div','<?php echo date("Y",strtotime($date.' - 1 Month')); ?>','<?php echo date("m",strtotime($date.' - 1 Month')); ?>');">&lt;&lt;</a>
             <select name="month_dropdown" class="month_dropdown dropdown"><?php echo getAllMonths($dateMonth); ?></select>
@@ -54,24 +58,25 @@ function getCalender($year = '',$month = '')
         <div id="event_list" class="none"></div>
         <!--For Add Event-->
         <form id="event_add" class="none">
-            <label><strong>Event Title: </strong></label>
-            <input type="text" id="eventTitle" value=""/><br>
+            <label class="custom-label-control"><strong>Event Title: </strong></label>
+            <input class="form-control custom-form-control" type="text" id="eventTitle" value=""/><br>
 
-            <label><strong>Event Date: </strong></label>
-            <input type="text" id="eventDate"><br>
+            <label class="custom-label-control"><strong>Event Date: </strong></label>
+            <input class="form-control custom-form-control" type="text" id="eventDate"><br>
 
-            <label><strong>Start Time: </strong></label>
-            <input type="text" id="eventStart"><br>
+            <label class="custom-label-control"><strong>Start Time: </strong></label>
+            <input class="form-control custom-form-control" type="text" id="eventStart"><br>
 
-            <label><strong>End Time: </strong></label>
-            <input type="text" id="eventEnd"><br>
+            <label class="custom-label-control"><strong>End Time: </strong></label>
+            <input class="form-control custom-form-control" type="text" id="eventEnd"><br>
 
-            <label>Description:</label><textarea id="eventDesc" value=""></textarea><br>
+            <label class="custom-label-control">Description:</label>
+            <textarea class="form-control custom-form-control" id="eventDesc" value=""></textarea><br>
             <input class="hidden" id="eventId" value=""/><br>
             <input type="button" value="Submit" id="addEventBtn" class="btn btn-primary" onclick="return submitEventForm()" />
             <span id="error"></span>
         </form>
-        <div id="calender_section_top">
+        <div id="calendar_section_top">
             <ul>
                 <li>Sun</li>
                 <li>Mon</li>
@@ -82,7 +87,7 @@ function getCalender($year = '',$month = '')
                 <li>Sat</li>
             </ul>
         </div>
-        <div id="calender_section_bot">
+        <div id="calendar_section_bot">
             <ul>
             <?php
                 $dayCount = 1;
@@ -99,7 +104,7 @@ function getCalender($year = '',$month = '')
                         if(strtotime($currentDate) == strtotime(date("Y-m-d"))){ ?>
                             <li class="grey date_cell">
                         <?php }elseif($eventNum > 0){ ?>
-                            <li class="light_sky date_cell">
+                            <li class="saving-paws-blue date_cell">
                         <?php }else{ ?>
                             <li class="date_cell">
                         <?php } ?>
@@ -126,7 +131,7 @@ function getCalender($year = '',$month = '')
                         }
                         $dayCount++;
             ?>
-            <?php }else{ ?>
+            <?php } else { ?>
                 <li><span>&nbsp;</span></li>
             <?php } } ?>
             </ul>
@@ -145,7 +150,7 @@ function getCalender($year = '',$month = '')
         }
 
         $.loadScript('https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js', function() {
-            $("#eventDate").datepicker();
+            $("#eventDate").datepicker({ dateFormat: "mm-dd-yy" });
         });
 
         $.loadScript('https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.10.0/jquery.timepicker.min.js', function() {
@@ -159,8 +164,7 @@ function getCalender($year = '',$month = '')
             });
         });
 
-        $.loadScript('js/calendar.js', function() {
-        });
+        $.loadScript('js/calendar.js', function() {});
 
         $(document).ready(function(){
             $('.date_cell').mouseenter(function(){
@@ -180,6 +184,15 @@ function getCalender($year = '',$month = '')
             $(document).click(function(){
                 $('#event_list').slideUp('slow');
             });
+
+            jQuery.loadScript = function (url, callback) {
+                jQuery.ajax({
+                    url: url,
+                    dataType: 'script',
+                    success: callback,
+                    async: true
+                });
+            }
         });
     </script>
 <?php
@@ -222,7 +235,7 @@ function getEvents($date = ''){
     $date = $date?$date:date("Y-m-d");
     //Get events based on the current date
     $conn = db_connect();
-    $result = $conn->query("SELECT Id, Name, Date, StartTime, EndTime, Description FROM Events WHERE Date = '".$date."' AND Status = 1");
+    $result = $conn->query("SELECT Id, Name, Date, StartTime, EndTime, Description FROM Events WHERE Date = '".$date."' AND Status = 1 ORDER BY StartTime ASC");
     if ($result->rowCount() > 0) { ?>
         <h2>Events on <?php echo date("l, d M Y",strtotime($date)) ?></h2>
         <?php while($row = $result->fetch()) {
@@ -231,7 +244,7 @@ function getEvents($date = ''){
             $startTime = formatTimeString($row['StartTime']);
             $endTime = formatTimeString($row['EndTime']);
             $desc = $row["Description"];
-            $date = formatDateString($date);
+            $date = formatDateString($row["Date"]);
             ?>
             <div class="col-xs-6">
                 <input class="hidden eventListingId" value="<?=$Id?>" />
@@ -239,7 +252,6 @@ function getEvents($date = ''){
                 Date: <span class="eventListingDate"><?=$date?></span><br>
                 Time: <span class="eventListingStart"><?=$startTime?></span> - <span class="eventListingEnd"><?=$endTime?></span><br>
                 Description: <span class="eventListingDesc"><?=$desc?></span><br>
-
             <?php if (isset($_SESSION["role"]) && ($_SESSION["role"] == "admin" || $_SESSION["role"] == "seo")) { ?>
                 <button type="button" onClick="editEvent(this)" class="editEventBtn btn btn-primary" value="Edit">Edit</button>
                 <input type="button"onClick="deleteEvent(this)" class="delEventBtn btn btn-danger" value="Delete"/>
@@ -269,7 +281,7 @@ function addEvent($date,$name,$startTime,$endTime,$desc) {
     }
 }
 
-function editEvent($id,$date,$name,$startTime,$endTime,$desc){
+function editEvent($id,$date,$name,$startTime,$endTime,$desc) {
     $conn = db_connect();
     $update = $conn->prepare('UPDATE Events SET Name = :name, Date = :date, StartTime = :startTime, EndTime = :endTime, Description = :desc WHERE Id = :id');
     $update->bindParam(":name", $name, PDO::PARAM_STR);
@@ -287,7 +299,7 @@ function editEvent($id,$date,$name,$startTime,$endTime,$desc){
     }
 }
 
-function deleteEvent($id){
+function deleteEvent($id) {
     $conn = db_connect();
     $delete = $conn->prepare("DELETE FROM Events WHERE Id = :id");
     $delete->bindParam(":id", $id, PDO::PARAM_INT);

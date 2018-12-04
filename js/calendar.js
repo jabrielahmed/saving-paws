@@ -4,9 +4,10 @@ function getCalendar(target_div,year,month){
     $.ajax({
         type:'POST',
         url:'functions/calendar-functions.php',
-        data:'func=getCalender&year='+year+'&month='+month,
+        data:'func=getCalendar&year='+year+'&month='+month,
         success:function(html){
             $('#'+target_div).html(html);
+            $("#eventDate").datepicker({ dateFormat: "mm-dd-yy" });
         }
     });
 }
@@ -21,6 +22,7 @@ function getEvents(date){
             $('#event_list').html(html);
             $('#event_add').slideUp('slow');
             $('#event_list').slideDown('slow');
+            $("#eventDate").datepicker({dateFormat: "mm-dd-yy"});
         }
     });
 }
@@ -90,7 +92,7 @@ function submitEventForm() {
                 data: 'func=addEvent&date=' + dbDate + '&title=' + title + '&startTime=' + startTime + '&endTime=' + endTime + '&desc=' + desc,
                 success: function (msg) {
                     if (msg == 'ok') {
-                        var dateSplit = date.split("-");
+                        var dateSplit = date.split("/");
                         $('#eventTitle').val('');
                         alert('Event Created Successfully.');
                         $('#eventDate').val("");
@@ -116,7 +118,7 @@ function submitEventForm() {
                 data: 'func=editEvent&id=' + id + '&date=' + dbDate + '&title=' + title + '&startTime=' + startTime + '&endTime=' + endTime + '&desc=' + desc,
                 success: function (msg) {
                     if (msg == 'ok') {
-                        var dateSplit = date.split("-");
+                        var dateSplit = date.split("/");
                         $('#eventTitle').val('');
                         alert('Event Edited Successfully.');
                         $('#eventDate').val("");

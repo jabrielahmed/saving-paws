@@ -2,11 +2,12 @@ $( document ).ready(function() {
 
     $(".explain").hide();
     $(".additional-rent-questions").hide();
+    $(".previous-pets").hide();
 
     previousPet();
 
     // revealing new input on "if yes" questions
-    $('input:radio[name="rent-own-parents"]').change(function() {
+    $('input:radio[name="RentOwn"]').change(function() {
 
         if($(this).val() == "Rent") {
             //reveal next label/input pair
@@ -17,7 +18,7 @@ $( document ).ready(function() {
         }
     });
 
-    $('input:radio[name="move"]').change(function() {
+    $('input:radio[name="Move"]').change(function() {
 
         if($(this).val() == "No") {
             //reveal next label/input pair
@@ -28,7 +29,7 @@ $( document ).ready(function() {
         }
     });
 
-    $('input:radio[name="euthanized"], input:radio[name="surrendered"], input:radio[name="applied"], input:radio[name="volunteer"]').change(function() {
+    $('input:radio[name="Euthanized"], input:radio[name="Surrendered"], input:radio[name="FencedYard"], input:radio[name="Garage"], input:radio[name="TiedUp"], input:radio[name="AppliedBefore"], input:radio[name="Volunteer"]').change(function() {
 
         if($(this).val() == "Yes") {
             //reveal next label/input pair
@@ -38,11 +39,21 @@ $( document ).ready(function() {
             $(this).siblings(".explain").hide();
         }
     });
+
+    $('input:radio[name="CompanionAnimal"]').change(function() {
+
+        if($(this).val() == "Yes") {
+            //reveal next label/input pair
+            $(".previous-pets").show();
+        }
+        else {
+            $(".previous-pets").hide();
+        }
+    });
 });
 
 function previousPet() {
     var count = $(".previous-pet").length;
-    console.log(count);
     $(".form-previous-pets").append(
         "<div class='previous-pet'>" +
         "<input type='text' class='form-control previous-pet-item type-of-animal' name='previous-pet-type-" + count + "' id='previous-pet-type-" + count + "'>" +
