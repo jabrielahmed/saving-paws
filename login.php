@@ -2,7 +2,7 @@
     <!-- put custom style sheets here -->
 <link href="css/login.css" rel="stylesheet" type="text/css">
 <?php include("shared/navbar.php"); ?>
-<?php include("/var/www/students/lorenk45/saving-paws/saving-paws/functions/login-functions.php");
+<?php include("functions/login-functions.php");
 if (!isset($_SESSION["username"])) {
     if(isset($_POST["username"])) {
 
@@ -33,6 +33,7 @@ else {
             <label for="password">Password: </label>
             <input type="password" class="form-control" placeholder="password" name="password" />
             <button type="submit" class="btn btn-primary">Login</button>
+			<p class="message">Not registered? <a href="register.php">Sign Up</a></p>
         </form>
     </div>
 </div>
