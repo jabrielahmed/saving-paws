@@ -1,6 +1,6 @@
 <?php
-require('/var/www/students/lorenk45/saving-paws/database/db_credentials.php');
-require_once('/var/www/students/lorenk45/saving-paws/database/database.php');
+require('/var/www/students/team8/saving-paws/database/db_credentials.php');
+require_once('/var/www/students/team8/saving-paws/database/database.php');
 
 $db = db_connect();
 

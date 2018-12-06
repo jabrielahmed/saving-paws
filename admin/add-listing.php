@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$color = getInput("color");
 	$fileName = "";
 	if(is_uploaded_file($_FILES["image"]["tmp_name"]) && getimagesize($_FILES["image"]["tmp_name"]) != false) {
-		$uploads = "/var/www/students/team8/images/uploads";
+		$uploads = "/var/www/students/team8/saving-paws/images/uploads";
 		$fileName = basename($_FILES["image"]["name"]);
 		move_uploaded_file($_FILES["image"]["tmp_name"], "$uploads/$name");
 	} else {
@@ -58,7 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$db->exec("INSERT INTO Animals (Name, Gender, IsDog, Breed, BirthDate, Color, Size, Picture, 
 		Fixed, Declawed, Housetrained, Site, Location, IntakeDate, Description) VALUES (".$db->quote($name).", ".
 		$db->quote($gender).", ".$db->quote($isDog).", ".$db->quote($breed).", ".$db->quote($birthDate).", ".
-		$db->quote($color).", ".$db->quote($size).", ".$db->quote("http://webdev.cs.uwosh.edu/students/team8/images/uploads/$name")
+		$db->quote($color).", ".$db->quote($size).", ".$db->quote("http://webdev.cs.uwosh.edu/students/team8/saving-paws/images/uploads/$name")
 		.", ".$db->quote($fixed).", ".$db->quote($declawed).", ".$db->quote($houseTrained).", ".$db->quote($site).", ".
 		$db->quote($location).", ".$db->quote($intakeDate).", ".$db->quote($description).");");
 		db_disconnect($db);
