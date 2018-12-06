@@ -110,43 +110,56 @@
             <div class="item">
               <div class="clearfix"> <img src="images/home/img-8.jpg" alt="" class="float-left">
                 <div class="name float-left">
-                  <h6>Mahfuz Riad</h6>
-                  <p>CEO, Company</p>
-                </div>
-                <!-- /.name --> 
-              </div>
-              <!-- /.clearfix -->
-              <div class="text">
-                <p>I’ve been happy with the services provided by Finazi LLC. Felix has been wonderful! He has returned my calls quick-ly, and he answered all my questions.</p>
-              </div>
-            </div>
-            <!-- /.item -->
-            <div class="item">
-              <div class="clearfix"> <img src="images/home/img-9.jpg" alt="" class="float-left">
-                <div class="name float-left">
-                  <h6>Abdur Rob</h6>
-                  <p>CEO, Developer</p>
-                </div>
-                <!-- /.name --> 
-              </div>
-              <!-- /.clearfix -->
-              <div class="text">
-                <p>I’ve been happy with the services provided by Finazi LLC. Felix has been wonderful! He has returned my calls quick-ly, and he answered all my questions.</p>
-              </div>
-            </div>
-            <!-- /.item -->
-            <div class="item">
-              <div class="clearfix"> <img src="images/home/img-8.jpg" alt="" class="float-left">
-                <div class="name float-left">
-                  <h6>Mahfuz Riad</h6>
-                  <p>CEO, Company</p>
-                </div>
-                <!-- /.name --> 
-              </div>
-              <!-- /.clearfix -->
-              <div class="text">
-                <p>I’ve been happy with the services provided by Finazi LLC. Felix has been wonderful! He has returned my calls quick-ly, and he answered all my questions.</p>
-              </div>
+					<h6>Shelley Draeger</h6>
+                                    <p>Local guide</p>
+                                </div>
+                                <!-- /.name -->
+                            </div>
+                            <!-- /.clearfix -->
+                            <div class="text">
+                                <p>Great organization with a big heart. The people working there clearly love animals and want establish a great fit between you and the pet you want. We adopted a great, affectionate dog and saved a life instead of overpaying a breeder. They recommended a great veterinarian and trainer. Very happy with their services. Make sure you donate and help save some lives.</p>
+                            </div>
+                        </div>
+                        <!-- /.item -->
+                        <div class="item">
+                            <div class="clearfix"> <img src="images/home/img-20.jpg" alt="" class="float-left">
+                                <div class="name float-left">
+                                    <h6>Heather Duaime</h6>
+                                    <p>Saving Paws Adopter</p>
+                                </div>
+                                <!-- /.name -->
+                            </div>
+                            <!-- /.clearfix -->
+                            <div class="text">
+                                <p>Such an awesome organization! These people are so compassionate and dedicated to rehabilitating, training, nurturing, and doing whatever it takes to make these animals adoptable into loving forever homes. Very impressed by the level of education and devotion from Lori and the rest of the team. We cannot wait to bring our new sweet girl home in a few days. Thank you Saving Paws :)</p>
+                            </div>
+                        </div>
+						<div class="item">
+                            <div class="clearfix"> <img src="images/home/img-21.jpg" alt="" class="float-left">
+                                <div class="name float-left">
+                                    <h6>Mark Lamers</h6>
+                                    <p>Local donator</p>
+                                </div>
+                                <!-- /.name -->
+                            </div>
+                            <!-- /.clearfix -->
+                            <div class="text">
+                                <p>Great place. Great People.</p>
+                            </div>
+                        </div>
+                        <!-- /.item -->
+                        <div class="item">
+                            <div class="clearfix"> <img src="images/home/img-22.jpg" alt="" class="float-left">
+                                <div class="name float-left">
+                                    <h6>Michelle McRae and Betsy Moder</h6>
+                                    <p>Founders</p>
+                                </div>
+                                <!-- /.name -->
+                            </div>
+                            <!-- /.clearfix -->
+                            <div class="text">
+                                <p>Here at Saving Paws we are dedicated to rescuing homeless, abandoned and special needs animals and finding new adoptive homes or providing a lifelong sanctuary for them; to train and provide service dogs to children, adults and Veterans with disabilities to help with both physical and emotional independence. We also seek to educate the public regarding animal responsibility and the use of service dogs in public places.</p>
+                            </div>
             </div>
             <!-- /.item --> 
           </div>

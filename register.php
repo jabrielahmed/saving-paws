@@ -2,7 +2,7 @@
     <!-- put custom style sheets here -->
 <link href="css/login.css" rel="stylesheet" type="text/css">
 <?php include("shared/navbar.php"); ?>
-<?php include("/var/www/students/lorenk45/saving-paws/functions/login-functions.php");
+<?php include("/var/www/students/team8/saving-paws/functions/login-functions.php");
 if($_SERVER["REQUEST_METHOD"] == "POST") {
 $salt =  generate_salt();
 	if( create_account($_POST["username"],$_POST["password"],$salt) == "User created successfully."){

@@ -2,7 +2,7 @@
 /*
  * Function requested by Ajax
  */
-include '/var/www/students/lorenk45/saving-paws/saving-paws/database/database.php';
+include '/var/www/students/team8/saving-paws/database/database.php';
 date_default_timezone_set("America/Chicago");
 
 if(session_id() == '') {

@@ -1,6 +1,6 @@
 <?php
 
-include '/var/www/students/lorenk45/saving-paws/saving-paws/database/database.php';
+include '/var/www/students/team8/saving-paws/database/database.php';
 
 /*echo '<pre>';
 var_dump($GLOBALS);
