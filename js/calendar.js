@@ -1,4 +1,5 @@
-// Getting calendar
+// Author: Kelsey Lorenz Amyotte
+// Used this tutorial for some javascript functions/ajax: https://www.codexworld.com/add-event-to-calendar-using-jquery-ajax-php/
 
 function getCalendar(target_div,year,month){
     $.ajax({
@@ -140,6 +141,7 @@ function submitEventForm() {
         return false;
     }
 }
+
 
 function validateEventForm(title, startTime, endTime) {
     if (title == undefined || title == "") {

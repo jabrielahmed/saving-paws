@@ -66,6 +66,7 @@
                                         <li><a href="dogs.php" class="tran3s">Dogs</a></li>
                                         <li><a href="our-special-needs-pets.php" class="tran3s">Our Special Needs Pets</a></li>
                                         <li><a href="adoption-form-cat.php" class="tran3s">Cat Adoption Application</a></li>
+                                        <li><a href="adoption-form-dog.php" class="tran3s">Dog Adoption Application</a></li>
                                     </ul>
                                 </li>
                                 <li class="<?php if (activePage() == "ways-to-give.php" || activePage() == "become-a-rescue-volunteer.php" || activePage() == "foster-a-homeless-pet.php") 
@@ -97,8 +98,7 @@
                                     <li class="dropdown-holder"><a href="#">Account</a>
                                         <ul class="sub-menu">
                                             <?php if($_SESSION["role"] == "admin") { ?>
-                                                <li><a href="applications.php" class="tran3s">Applications</a></li>
-                                                <li><a href="users.php" class="tran3s">Users</a></li>
+                                                <li><a href="add-listing.php" class="tran3s">Create Listing</a></li>
                                             <?php } ?>
                                             <?php if ($_SESSION["role"] == "admin" || $_SESSION["role"] == "seo" ) { ?>
                                                 <li><a href="events.php" class="tran3s">Events</a></li>

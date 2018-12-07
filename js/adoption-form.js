@@ -1,3 +1,6 @@
+// Author: Kelsey Lorenz Amyotte
+// regex taken from various parts of the internet, otherwise everything else is mine
+
 $( document ).ready(function() {
 
     $(".explain").hide();

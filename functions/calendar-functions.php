@@ -1,4 +1,8 @@
 <?php
+
+// Author: Kelsey Lorenz Amyotte
+// Source: Tutorial from: https://www.codexworld.com/add-event-to-calendar-using-jquery-ajax-php/
+
 /*
  * Function requested by Ajax
  */

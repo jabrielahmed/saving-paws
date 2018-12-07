@@ -62,11 +62,11 @@
 <!-- fancybox -->
 <script src="vendor/fancybox/dist/jquery.fancybox.min.js"></script>
 <!-- Gallery - isotop -->
-<script type="text/javascript" src="vendor/isotope.pkgd.min.js"></script>
+<script src="vendor/isotope.pkgd.min.js"></script>
 <!-- WOW js -->
-<script type="text/javascript" src="vendor/WOW-master/dist/wow.min.js"></script>
+<script src="vendor/WOW-master/dist/wow.min.js"></script>
 <!-- Circle Progress -->
-<script type="text/javascript" src="vendor/circle-progress.js"></script>
+<script src="vendor/circle-progress.js"></script>
 <!-- Style js -->
 <script src="js/custom.js"></script>
 <a href="http://validator.w3.org/check/referer" style="display: block;margin: 0 auto;text-align: center; width: 120px; background: #333; color: #fff; padding: 5px 10px;">Validate Me</a>

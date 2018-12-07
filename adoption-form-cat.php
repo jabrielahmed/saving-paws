@@ -1,6 +1,9 @@
 <?php
 include("functions/adoption-form-functions.php");
-include("shared/header.php");?>
+include("shared/header.php");
+// Author: Kelsey Lorenz Amyotte
+// have some form helper classes from bootstrap
+?>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-formhelpers/2.3.0/css/bootstrap-formhelpers.min.css">
 <link rel="stylesheet" href="css/adoption-form.css">
 <?php include("shared/navbar.php"); ?>
@@ -62,12 +65,14 @@ include("shared/header.php");?>
 
                     <div class="col-xs-12 col-sm-3">
                         <label class="label-question" for="state">State:</label><br>
-                        <select required name="State" id="state" class="form-control bfh-states" data-country="US" data-state="WI"></select>
+                        <select required name="State" id="state" class="form-control bfh-states" data-country="US" data-state="WI">
+                            <option value="">Select a State</option>
+                        </select>
                     </div>
 
                     <div class="col-xs-12 col-sm-3">
-                        <label class="label-question" for="Zip">ZIP Code:</label><br>
-                        <input required type="zip" class="form-control" name="ZIP" id="zip"><br>
+                        <label class="label-question" for="zip">ZIP Code:</label><br>
+                        <input required type="text" class="form-control" name="ZIP" id="zip"><br>
                     </div>
                 </div>
                 <div class="row">
@@ -237,20 +242,20 @@ include("shared/header.php");?>
                 </div>
                 <div class="row">
                     <div class="col-xs-12 form-euthanized">
-                        <label class="label-question" for="euthanized">Have you ever had a pet euthanized?</label><br>
+                        Have you ever had a pet euthanized?<br>
                         <input type="radio" name="Euthanized" class="form-check-label" id="euthanized-yes" value="Yes" />
                         <label for="euthanized-yes">Yes</label>
                         <input type="radio" name="Euthanized" class="form-check-label" id="euthanized-no" value="No" />
                         <label for="euthanized-no">No</label><br>
                         <div class="explain">
-                            <label class="label-question" for="EuthanizedExplain">Please explain:</label><br>
-                            <input type="text" class="form-control" name="euthanized-pet-explain" id="euthanized-pet-explain"><br>
+                            <label class="label-question" for="euthanized-pet-explain">Please explain:</label><br>
+                            <input type="text" class="form-control" name="EuthanizedExplain" id="euthanized-pet-explain"><br>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-12 form-adjust">
-                        <label class="label-question" for="adjust">If you have other pet(s) will they adjust to a new pet entering the household?</label><br>
+                        If you have other pet(s) will they adjust to a new pet entering the household?<br>
                         <input type="radio" name="AdjustNewPet" class="form-check-label" id="adjust-yes" value="Yes" />
                         <label for="adjust-yes">Yes</label>
                         <input type="radio" name="AdjustNewPet" class="form-check-label" id="adjust-no" value="No" />
@@ -265,7 +270,7 @@ include("shared/header.php");?>
                 </div>
                 <div class="row">
                     <div class="col-xs-12 form-allergies">
-                        <label class="label-question" for="allergies">Does any member in your house have allergies to cats?</label><br>
+                        Does any member in your house have allergies to cats?<br>
                         <input type="radio" name="Allergies" class="form-check-label" id="allergies-yes" value="Yes" />
                         <label for="allergies-yes">Yes</label>
                         <input type="radio" name="Allergies" class="form-check-label" id="allergies-no" value="No" />
@@ -277,27 +282,27 @@ include("shared/header.php");?>
                         <label class="label-question" for="hours">How many hours each day will the cat be without human company?</label><br>
                         <input type="text" class="form-control" name="HoursWithoutHumans" id="hours"><br>
                         <label class="label-question" for="hours-explain">Please explain:</label><br>
-                        <textarea type="text" class="form-control" name="HoursWithoutHumansExplain" id="hours-explain"></textarea>
+                        <textarea class="form-control" name="HoursWithoutHumansExplain" id="hours-explain"></textarea>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-12 form-vaccinations">
-                        <label class="label-question" for="vaccinations">Will you keep the cat up-to-date on vaccinations?</label><br>
+                        Will you keep the cat up-to-date on vaccinations?<br>
                         <input type="radio" name="Vaccinations" class="form-check-label" id="vaccinations-yes" value="Yes" />
-                        <label for="allergies-yes">Yes</label>
+                        <label for="vaccinations-yes">Yes</label>
                         <input type="radio" name="Vaccinations" class="form-check-label" id="vaccinations-no" value="No" />
-                        <label for="allergies-no">No</label><br>
+                        <label for="vaccinations-no">No</label><br>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-12 form-vacation">
-                        <label class="label-question" for="Vacation">If you go away for a few days, or on a vacation, who will take care of the cat?</label><br>
-                        <textarea type="text" class="form-control" name="Vacation" id="vacation"></textarea>
+                        <label class="label-question" for="vacation">If you go away for a few days, or on a vacation, who will take care of the cat?</label><br>
+                        <textarea class="form-control" name="Vacation" id="vacation"></textarea>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-12 form-move">
-                        <label class="label-question" for="move">If you move, will you take the cat with you?</label><br>
+                        If you move, will you take the cat with you?<br>
                         <input type="radio" name="Move" class="form-check-label" id="move-yes" value="Yes" />
                         <label for="move-yes">Yes</label>
                         <input type="radio" name="Move" class="form-check-label" id="move-no" value="No" />
@@ -310,7 +315,7 @@ include("shared/header.php");?>
                 </div>
                 <div class="row">
                     <div class="col-xs-12 form-declaw">
-                        <label class="label-question" for="declaw">Will you declaw this cat/kitten?</label><br>
+                        Will you declaw this cat/kitten?<br>
                         <input type="radio" name="Declaw" class="form-check-label" id="declaw-yes" value="Yes, front only" />
                         <label for="declaw-yes">Yes</label>
                         <input type="radio" name="Declaw" class="form-check-label" id="declaw-no" value="No" />
@@ -336,7 +341,7 @@ include("shared/header.php");?>
                 </div>
                 <div class="row">
                     <div class="col-xs-12 form-applied">
-                        <label class="label-question" for="applied">Have you ever applied to adopt from Saving Paws Animal Rescue in the past?</label><br>
+                        Have you ever applied to adopt from Saving Paws Animal Rescue in the past?<br>
                         <input type="radio" name="AppliedBefore" class="form-check-label" id="applied-yes" value="Yes" />
                         <label for="applied-yes">Yes</label>
                         <input type="radio" name="AppliedBefore" class="form-check-label" id="applied-no" value="No" />
@@ -349,7 +354,7 @@ include("shared/header.php");?>
                 </div>
                 <div class="row">
                     <div class="col-xs-12 form-responsibility">
-                        <label class="label-question" for="responsibility">Are you willing to take responsibility for this cat for the next 15 to 20 years?</label><br>
+                        Are you willing to take responsibility for this cat for the next 15 to 20 years?<br>
                         <input type="radio" name="Responsibility" class="form-check-label" id="responsibility-yes" value="Yes" />
                         <label for="responsibility-yes">Yes</label>
                         <input type="radio" name="Responsibility" class="form-check-label" id="responsibility-no" value="No" />
@@ -364,7 +369,7 @@ include("shared/header.php");?>
                 </div>
                 <div class="row">
                     <div class="col-xs-12 form-vets">
-                        <label class="label-question"">Please list your current veterinarian and any vets you have used in the past 10 years.</label><br>
+                        <label class="label-question">Please list your current veterinarian and any vets you have used in the past 10 years.</label><br>
                         <label for="past-vets">Vet Clinic and Vet Name(s): </label>
                         <textarea class="form-control" name="VetClinicAndVet" id="past-vets" ></textarea><br>
                         <label for="vet-phone">Current Veterinarian Phone: </label>
@@ -373,27 +378,27 @@ include("shared/header.php");?>
                 </div>
                 <div class="row">
                     <div class="form-vets col-xs-12">
-                        <label class="label-question"">Please provide two non-related references: </label><br>
+                        <label class="label-question">Please provide two non-related references: </label><br>
                         <div class="col-3">
-                            <label for="ref-name">Name: </label>
+                            Name:
                             <input class="form-control" name="Reference1" id="ref-name1" ><br>
                             <input class="form-control" name="Reference2" id="ref-name2" ><br>
                         </div>
                         <div class="col-3">
-                            <label for="ref-num">Number and Best Time to Call: </label>
+                            Number and Best Time to Call:
                             <input class="form-control" name="ReferencePhone1" id="ref-num1" ><br>
                             <input class="form-control" name="ReferencePhone2" id="ref-num2" ><br>
                         </div>
                         <div class="col-4">
-                            <label for="ref-email">Email: </label>
+                            Email:
                             <input class="form-control" name="ReferenceEmail1" id="ref-email1" ><br>
                             <input class="form-control" name="ReferenceEmail2" id="ref-email2" ><br>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xs-12 form-applied">
-                        <label class="label-question" for="volunteer">Have you ever volunteered for a shelter before?</label><br>
+                    <div class="col-xs-12 form-volunteer">
+                        Have you ever volunteered for a shelter before?<br>
                         <input type="radio" name="Volunteer" class="form-check-label" id="volunteer-yes" value="Yes" />
                         <label for="volunteer-yes">Yes</label>
                         <input type="radio" name="Volunteer" class="form-check-label" id="volunteer-no" value="No" />

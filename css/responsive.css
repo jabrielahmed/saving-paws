@@ -6,6 +6,16 @@
 		padding-left: 0 !important;
 		padding-right: 0 !important;
 	}
+
+	/* kelsey changes for one big descripton on the cats.php page */
+	.our-pet-services {
+		height: 700px;
+		overflow: auto;
+	}
+
+	#come-to-us-broken {
+		height: auto;
+	}
 }
 /*(max-width: 992px)*/
 @media (max-width: 1199px) {

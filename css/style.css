@@ -601,6 +601,7 @@ img, .banner-bottom-item:before, .client-slider .opacity .item .text:after, .cli
 	padding: 20px 0 20px; 
 	text-align: center;
 }
+
 .our-pet-services .our-pet-services-item:hover .our-pet-services-text {border-color: #e53031;}
 .our-pet-services .our-pet-services-item .our-pet-services-text>h5>a {
 	text-transform: capitalize; 
@@ -2500,3 +2501,8 @@ footer .bottom-footer form button {
 
 /***** Dogs Page *****/
 
+label {
+  display: inline-block;
+  width: 100px;
+  text-align: right;
+}​

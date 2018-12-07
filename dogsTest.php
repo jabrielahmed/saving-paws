@@ -40,11 +40,12 @@ include("shared/header.php"); ?>
             <h2>Adoptable Dogs</h2>
 			<?php $db = db_connect();
 			$dogs = $db->query("SELECT * FROM Animals WHERE IsDog = 1;");
-
 			$num_rows = 0;
 			$dogArray = array(array());
 			$i = 0;
+			//Here you have all the dog information in a 2D array so it should be easier for you to work with it for the css and html.
 			foreach ($dogs as $dog) {
+				/*
 				$dogArray[$i][0] = $dog["Picture"];
 				$dogArray[$i][1] = $dog["Name"];
 				$dogArray[$i][2] = $dog["Gender"];
@@ -59,47 +60,21 @@ include("shared/header.php"); ?>
 				$dogArray[$i][1] = $dog["Site"];
 				$dogArray[$i][1] = $dog["Location"];
 				$dogArray[$i][1] = $dog["IntakeDate"];
-
 				$i++;
-			}
-
-
-				?>
-				
-				<h1>Basic Grid</h1>
-				<div class="flex-grid">
-				  <div class="col">This little piggy went to market.</div>
-				  <div class="col">This little piggy stayed home.</div>
-				  <div class="col">This little piggy had roast beef.</div>
-				</div>
-
-				<div class="flex-grid">
-				  <div class="col">This little piggy went to market.</div>
-				  <div class="col">This little piggy stayed home.</div>
-				  <div class="col">This little piggy had roast beef.</div>
-				  <div class="col">This little piggy had none.</div>
-				  <div class="col">This little piggy went wee wee wee all the way home.</div>
-				</div>
-
-				<div class="flex-grid-thirds">
-				  <div class="col">This little piggy went to market.</div>
-				  <div class="col">This little piggy stayed home.</div>
-				  <div class="col">This little piggy had roast beef.</div>
-				</div>
-				
-				
-				
-				<?php /*
-				<div class="row our-pet-services">
-					<div class="col-md-3 col-sm-6 col-xs-12">
-						<div class="our-pet-services-item">
-							<div class="our-pet-services-img">
-								<img src="<?php echo($dog["Picture"]); ?>" alt="A dog" class="float_right" height="225">
+				*/
+			?>
+				<div class="container">
+					<div class="row our-pet-services">
+						<div class="col-md-3 col-sm-6 col-xs-12">
+							<div class="our-pet-services-item">
+								<div class="our-pet-services-img">
+									<img src="<?php echo($dog["Picture"]); ?>" alt="A dog" >
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-
+				
 				<div class="our-pet-services-text">
 			
 					<p>Name: <?php echo($dog["Name"]); ?><br>
@@ -118,104 +93,112 @@ include("shared/header.php"); ?>
 					<br>
 
 				</div>
-				*/
-				?>
-					<?php
+				
+			<?php	
+			}
+			
+			?>
+
+			
+
+			
+
+
+				
+				
+				
+			</div>
+					
+			<?php
 				
 			
 			db_disconnect($db);
 			?>
+			
+			<h2>They Come to Us Broken...</h2>
             <section class="pet-services-v-one">
 				<div class="container">
 					<div class="row our-pet-services">
 						<div class="col-md-3 col-sm-6 col-xs-12">
 							<div class="our-pet-services-item">
 								<div class="our-pet-services-img">
-									<img src="images/home/img-3.jpg" alt="image">
+									<img src="images/eadf41_31eef2e1a54f4187b326a6597a98390b.webp" alt="image">
 								</div>
 								<div class="our-pet-services-text">
-									<h5><a href="adoptions.php">Adoptions</a></h5>
-									<p>Saving one dog will not change the world, but surely for that one dog, the world will change forever.</p>
+									<h5><a href="adoptions.php">Loving animals like us.</a></h5>
+
 								</div>
 							</div>
 						</div>
 						<div class="col-md-3 col-sm-6 col-xs-12">
 							<div class="our-pet-services-item">
 								<div class="our-pet-services-img">
-									<img src="images/home/img-4.jpg" alt="image">
+									<img src="images/eadf41_eaf25efd186f497990e49a2f4adb2675.webp" alt="image">
 								</div>
 								<div class="our-pet-services-text">
-									<h5><a href="#">Pet Health care</a></h5>
-									<p>Your pet is part of the family so treat them like one!</p>
+									<h5><a href="#">Need a home too.</a></h5>
+
 								</div>
 							</div>
 						</div>
 						<div class="col-md-3 col-sm-6 col-xs-12">
 							<div class="our-pet-services-item">
 								<div class="our-pet-services-img">
-									<img src="images/home/img-5.jpg" alt="image">
+									<img src="images/eadf41_5f0bb99720a14aa788c4a7753eac6a5f.webp" alt="image">
 								</div>
 								<div class="our-pet-services-text">
-									<h5><a href="#">DOG WALKING</a></h5>
-									<p>Whether your pet needs a scratch around the ear, a face to lick or a place to play,</p>
+									<h5><a href="#">From Neglected...</a></h5>
+
 								</div>
 							</div>
 						</div>
 						<div class="col-md-3 col-sm-6 col-xs-12">
 							<div class="our-pet-services-item">
 								<div class="our-pet-services-img">
-									<img src="images/home/img-6.jpg" alt="image">
+									<img src="images/eadf41_639347088ebb464dbbfd265b981aaa70.webp" alt="image">
 								</div>
 								<div class="our-pet-services-text">
-									<h5><a href="#">PET GROOMING</a></h5>
-									<p>Best Friends Pet Care is the leader of the pack when it comes to the absolute best care for your cat or dog.</p>
+									<h5><a href="#">And Shattered...</a></h5>
+
 								</div>
 							</div>
 						</div>
 						<div class="col-md-3 col-sm-6 col-xs-12">
 							<div class="our-pet-services-item">
 								<div class="our-pet-services-img">
-									<img src="images/home/img-7.jpg" alt="image">
+									<img src="images/eadf41_e958e12df4c1406e91d30494b5b29c76.webp" alt="image">
 								</div>
 								<div class="our-pet-services-text">
-									<h5><a href="#">Nice Product</a></h5>
-									<p>In a professional context it often happens that private or corporate clients order a publication</p>
+									<h5><a href="#">It's so very hard to see the harsh reality sometimes</a></h5>
+
 								</div>
 							</div>
 						</div>
 						<div class="col-md-3 col-sm-6 col-xs-12">
 							<div class="our-pet-services-item">
 								<div class="our-pet-services-img">
-									<img src="images/services/img-7.jpg" alt="image">
+									<img src="images/eadf41_eaf25efd186f497990e49a2f4adb2675.webp" alt="image">
 								</div>
 								<div class="our-pet-services-text">
-									<h5><a href="#">Puppy Program</a></h5>
-									<p>Whether your pet needs a scratch around the ear, a face to lick or a place to play,</p>
+									<h5><a href="#">But so very rewards to see the end results.</a></h5>
+
 								</div>
 							</div>
 						</div>
-						<div class="col-md-3 col-sm-6 col-xs-12">
+							<div class="col-md-3 col-sm-6 col-xs-12">
 							<div class="our-pet-services-item">
 								<div class="our-pet-services-img">
-									<img src="images/services/img-8.jpg" alt="image">
+									<img src="images/eadf41_ba6c8ac949c7433988c08ed7756bfd27.webp" alt="image">
 								</div>
 								<div class="our-pet-services-text">
-									<h5><a href="#">Monthly Care Contracts</a></h5>
-									<p>Best Friends Pet Care is the leader of the pack when it comes to the absolute best care for your cat or dog.</p>
+									<h5><a href="#">Loved, Bold, and Brave Hearted.</a></h5>
+
 								</div>
 							</div>
 						</div>
-						<div class="col-md-3 col-xs-12">
-							<div class="our-pet-services-item">
-								<div class="our-pet-services-img">
-									<img src="images/services/img-9.jpg" alt="image">
-								</div>
-								<div class="our-pet-services-text">
-									<h5><a href="#">Pet Care</a></h5>
-									<p>In a professional context it often happens that private or corporate clients order a publication</p>
-								</div>
-							</div>
-						</div>
+
+
+
 					</div>
 				</div>
 			</section>
@@ -225,4 +208,4 @@ include("shared/header.php"); ?>
     </div>
   </section>
     <!-- put custom js here -->
-    <?php include("shared/footer.php");?></html>
+    <?php include("shared/footer.php");?>
