@@ -4,11 +4,18 @@ include("shared/header.php");?>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-formhelpers/2.3.0/css/bootstrap-formhelpers.min.css">
 <link rel="stylesheet" href="css/adoption-form.css">
 <?php include("shared/navbar.php"); ?>
+<?php if (isset($_POST) && !empty($_POST)) {
+    // Author: Kelsey Lorenz Amyotte
+    // have some form helper classes from bootstrap
+    $_POST["dog"] = true;
+    processForm();
+}?>
 <div class="container">
     <div class="row">
         <h1>Dog Adoption Form</h1>
     </div>
     <form id="adoption-form.php" onSubmit="return validateForm(this)" method="post">
+        <input type="text" class="hidden" name="dog" value="" />
         <div class="row">
             <fieldset>
                 <legend>General Information</legend>
@@ -148,14 +155,14 @@ include("shared/header.php");?>
                         First Choice:
                         <select name="PetChosen1" id="dogs-chosen">
                             <?php foreach (getAllDogs() as $dog) { ?>
-                                <option value="<?=$dog["Id"]?>"><?=$dog["Name"]?></option>
+                                <option value="<?=$dog["Name"]?>"><?=$dog["Name"]?></option>
                             <?php } ?>
                         </select>
 
                         Second Choice:
                         <select name="PetChosen2">
                             <?php foreach (getAllDogs() as $dog) { ?>
-                                <option value="<?=$dog["Id"]?>"><?=$dog["Name"]?></option>
+                                <option value="<?=$dog["Name"]?>"><?=$dog["Name"]?></option>
                             <?php } ?>
                         </select>
                     </div>
@@ -183,7 +190,7 @@ include("shared/header.php");?>
                     <div class="col-xs-12">
                         <div class="form-radio-indoors-outdoors">
                             <label class="label-question">Dog will be kept:</label><br>
-                            <input type="radio" name="IndoorsOutdoors" class="form-check-label" id="indoors-outdoors-indoors" value="Me" />
+                            <input type="radio" name="IndoorsOutdoors" class="form-check-label" id="indoors-outdoors-indoors" value="Indoors" />
                             <label for="indoors-outdoors-indoors">Indoors</label>
                             <input type="radio" name="IndoorsOutdoors" class="form-check-label" id="indoors-outdoors-outdoors" value="Outdoors" />
                             <label for="indoors-outdoors-outdoors">Outdoors</label>
