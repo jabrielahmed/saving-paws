@@ -40,8 +40,56 @@ include("shared/header.php"); ?>
             <h2>Adoptable Dogs</h2>
 			<?php $db = db_connect();
 			$dogs = $db->query("SELECT * FROM Animals WHERE IsDog = 1;");
-			foreach($dogs as $dog){ 
+
+			$num_rows = 0;
+			$dogArray = array(array());
+			$i = 0;
+			foreach ($dogs as $dog) {
+				$dogArray[$i][0] = $dog["Picture"];
+				$dogArray[$i][1] = $dog["Name"];
+				$dogArray[$i][2] = $dog["Gender"];
+				$dogArray[$i][3] = $dog["Breed"];
+				$dogArray[$i][4] = $dog["Size"];
+				$dogArray[$i][5] = $dog["Color"];
+				$dogArray[$i][6] = $dog["BirthDate"];
+				$dogArray[$i][7] = $dog["Description"];
+				$dogArray[$i][8] = $dog["Fixed"];
+				$dogArray[$i][9] = $dog["Declawed"];
+				$dogArray[$i][1] = $dog["Housetrained"];
+				$dogArray[$i][1] = $dog["Site"];
+				$dogArray[$i][1] = $dog["Location"];
+				$dogArray[$i][1] = $dog["IntakeDate"];
+
+				$i++;
+			}
+
+
 				?>
+				
+				<h1>Basic Grid</h1>
+				<div class="flex-grid">
+				  <div class="col">This little piggy went to market.</div>
+				  <div class="col">This little piggy stayed home.</div>
+				  <div class="col">This little piggy had roast beef.</div>
+				</div>
+
+				<div class="flex-grid">
+				  <div class="col">This little piggy went to market.</div>
+				  <div class="col">This little piggy stayed home.</div>
+				  <div class="col">This little piggy had roast beef.</div>
+				  <div class="col">This little piggy had none.</div>
+				  <div class="col">This little piggy went wee wee wee all the way home.</div>
+				</div>
+
+				<div class="flex-grid-thirds">
+				  <div class="col">This little piggy went to market.</div>
+				  <div class="col">This little piggy stayed home.</div>
+				  <div class="col">This little piggy had roast beef.</div>
+				</div>
+				
+				
+				
+				<?php /*
 				<div class="row our-pet-services">
 					<div class="col-md-3 col-sm-6 col-xs-12">
 						<div class="our-pet-services-item">
@@ -70,10 +118,11 @@ include("shared/header.php"); ?>
 					<br>
 
 				</div>
-					
+				*/
+				?>
 					<?php
 				
-			}
+			
 			db_disconnect($db);
 			?>
             <section class="pet-services-v-one">
@@ -176,4 +225,4 @@ include("shared/header.php"); ?>
     </div>
   </section>
     <!-- put custom js here -->
-    <?php include("shared/footer.php");?>
+    <?php include("shared/footer.php");?></html>

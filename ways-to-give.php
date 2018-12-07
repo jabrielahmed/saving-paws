@@ -78,5 +78,6 @@
       </div>
     </div>
   </section>
+ </body>
 <!-- put custom js here -->
 <?php include("shared/footer.php");?>

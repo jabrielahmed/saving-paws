@@ -71,7 +71,7 @@ function getCalendar($year = '',$month = '')
             <input class="form-control custom-form-control" type="text" id="eventEnd"><br>
 
             <label class="custom-label-control">Description:</label>
-            <textarea class="form-control custom-form-control" id="eventDesc" value=""></textarea><br>
+            <textarea class="form-control custom-form-control" id="eventDesc"></textarea><br>
             <input class="hidden" id="eventId" value=""/><br>
             <input type="button" value="Submit" id="addEventBtn" class="btn btn-primary" onclick="return submitEventForm()" />
             <span id="error"></span>

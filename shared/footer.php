@@ -1,3 +1,4 @@
+
 <!-- Footer ____________________________ -->
 <footer>
     <div class="container">
@@ -69,5 +70,6 @@
 <!-- Style js -->
 <script src="js/custom.js"></script>
 <a href="http://validator.w3.org/check/referer" style="display: block;margin: 0 auto;text-align: center; width: 120px; background: #333; color: #fff; padding: 5px 10px;">Validate Me</a>
+</div>
 </body>
 </html>

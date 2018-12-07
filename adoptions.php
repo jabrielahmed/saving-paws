@@ -24,7 +24,7 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><span>-</span></li>
-          <li><a href="#">About us</a></li>
+          <li><a href="adoptions.php">Adoptions</a></li>
         </ul>
       </div>
     </div>
@@ -49,13 +49,13 @@
             <h3>To adopt from Saving Paws, just follow these simple steps: </h3>
             <ul>
               <li>
-                <p>Fill out an adoption application online at www.savingpaws.com.</p>
+                <p>Fill out an adoption application online under  the adoptions tab at www.savingpaws.com.</p>
               </li>
             </ul>
             <p>(Processing   your application can take anywhere from 1-4 days depending on response   time by references.  Once you are approved, you may return to pick up   your new companion(s). All applications are evaluated on a case-by-case   basis. If your application is not filled out in full it will not be   processed.) </p>
             <ul>
               <li>
-                <p>Set   an appointment to meet an adoptable pet. We are fully volunteer run and   don&rsquo;t have regular hours, so we will set up a time that works for you   to come visit. We are located in north Appleton and when you set up an   appointment we will give you directions to our rescue.</p>
+                <p>Set an appointment to meet an adoptable pet. We are fully volunteer run and don&rsquo;t have regular hours, so we will set up a time that works for you   to come visit. We are located in north Appleton and when you set up an   appointment we will give you directions to our rescue.</p>
               </li>
             </ul>
           </div>

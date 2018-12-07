@@ -22,12 +22,21 @@
                 </div>
             </div>
         </div>
+		
+		<?php
+			function activePage() {
+				$link = $_SERVER['PHP_SELF'];
+				$link_array = explode('/',$link);
+				$page = end($link_array);		
+				return $page;
+			}
+		?>
 
         <!-- Theme Main Menu ____________________________ -->
         <div class="theme-main-menu">
             <div class="container">
                 <div class="main-menu clear-fix">
-                    <div class="them-logo float-left"><a href="#"><img src="images/them-logo/them-main-logo-1.png" alt="logo"></a></div>
+                    <div class="them-logo float-left"><a href="index.php"><img src="images/them-logo/them-main-logo-1.png" alt="logo"></a></div>
 
                     <!-- Menu -->
                     <nav class="navbar">
@@ -39,8 +48,9 @@
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse" id="navbar-collapse-1">
                             <ul class="nav navbar-nav">
-                                <li class="dropdown-holder"><a href="index.php"> Home </a> </li>
-                                <li class="dropdown-holder"><a href="#">Events &amp; More</a>
+                                <li class="<?php if (activePage() == "index.php") echo 'dropdown-holder active current-page-item Active-menu'; else { echo 'dropdown-holder';} ?>"><a href="index.php"> Home </a> </li>
+                                <li class="<?php if (activePage() == "events.php" || activePage() == "paw-challenge.php" || activePage() == "open-houses.php" || activePage() == "s-p-a-r-k-e-d-program.php") 
+									echo 'dropdown-holder active current-page-item Active-menu'; else { echo 'dropdown-holder';} ?>"><a href="events.php">Events &amp; More</a>
                                     <ul class="sub-menu">
                                         <li><a href="events.php" class="tran3s">Events</a></li>
                                         <li><a href="paw-challenge.php" class="tran3s">Paw Print Challenge</a></li>
@@ -48,7 +58,8 @@
                                         <li><a href="s-p-a-r-k-e-d-program.php" class="tran3s">S.P.A.R.K.E.D Program</a></li>
                                     </ul>
                                 </li>
-                                <li class="dropdown-holder"><a href="#">Adoptions</a>
+                                <li class="<?php if (activePage() == "adoptions.php" || activePage() == "cats.php" || activePage() == "dogs.php" || activePage() == "our-special-needs-pets.php" || activePage() == "adoption-form-cat.php") 
+									echo 'dropdown-holder active current-page-item Active-menu'; else { echo 'dropdown-holder';} ?>"><a href="adoptions.php">Adoptions</a>
                                     <ul class="sub-menu">
                                         <li><a href="adoptions.php" class="tran3s">Adoptions</a></li>
                                         <li><a href="cats.php" class="tran3s">Cats</a></li>
@@ -57,14 +68,16 @@
                                         <li><a href="adoption-form-cat.php" class="tran3s">Cat Adoption Application</a></li>
                                     </ul>
                                 </li>
-                                <li class="dropdown-holder"><a href="#">Help Us</a>
+                                <li class="<?php if (activePage() == "ways-to-give.php" || activePage() == "become-a-rescue-volunteer.php" || activePage() == "foster-a-homeless-pet.php") 
+									echo 'dropdown-holder active current-page-item Active-menu'; else { echo 'dropdown-holder';} ?>"><a href="ways-to-give.php">Help Us</a>
                                     <ul class="sub-menu">
                                         <li><a href="ways-to-give.php" class="tran3s">Ways to Give</a></li>
                                         <li><a href="become-a-rescue-volunteer.php" class="tran3s">Volunteer</a></li>
                                         <li><a href="foster-a-homeless-pet.php" class="tran3s">Foster</a></li>
                                     </ul>
                                 </li>
-                                <li class="dropdown-holder active current-page-item Active-manu"><a href="#">About Us</a>
+                                <li class="<?php if (activePage() == "about-us.php" || activePage() == "permanent-residents.php" || activePage() == "future-plans.php" || activePage() == "future-plans.php" || activePage() == "contact-us.php") 
+									echo 'dropdown-holder active current-page-item Active-menu'; else { echo 'dropdown-holder';} ?>"><a href="about-us.php">About Us</a>
                                     <ul class="sub-menu">
                                         <li><a href="about-us.php" class="tran3s">About Us</a></li>
                                         <li><a href="permanent-residents.php" class="tran3s">Permanent Residents</a></li>
@@ -72,7 +85,8 @@
                                         <li><a href="contact-us.php" class="tran3s">Contact Us</a></li>
                                     </ul>
                                 </li>
-                                <li class="dropdown-holder"><a href="#">Thank You</a>
+                                <li class="<?php if (activePage() == "veterinary-partners.php" || activePage() == "community-partners.php" || activePage() == "happy-tails.php") 
+									echo 'dropdown-holder active current-page-item Active-menu'; else { echo 'dropdown-holder';} ?>"><a href="veterinary-partners.php">Thank You</a>
                                     <ul class="sub-menu">
                                         <li><a href="veterinary-partners.php" class="tran3s">Veterinary Partners</a></li>
                                         <li><a href="community-partners.php" class="tran3s">Community Partners</a></li>
@@ -93,7 +107,7 @@
                                         </ul>
                                     </li>
                                 <?php } else { ?>
-                                    <li class="dropdown-holder"><a href="login.php">Login</a>
+                                    <li class="<?php if (activePage() == "login.php") echo 'dropdown-holder active current-page-item Active-menu'; else { echo 'dropdown-holder';} ?>"><a href="login.php">Login</a>
                                 <?php } ?>
 
                             </ul>

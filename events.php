@@ -15,17 +15,16 @@ include_once('functions/calendar-functions.php');?>
     <div id="calendar_div">
         <?php echo getCalendar(); ?>
     </div>
-</div>
     <section class="we-are-my-pet-section">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 text-center">
                     <br><br>
                     <div class="img-thumbnail">
-                        <img src="images/SP-HM-2018-Poster.jpg" />
+                        <img src="images/SP-HM-2018-Poster.jpg" alt="Holiday Miracle 2018" />
                     </div>
                     <div class="img-thumbnail">
-                        <img src="images/eadf41_b34ea026b9f0449f94ee816487df7ba9~mv2.jpg" />
+                        <img src="images/eadf41_b34ea026b9f0449f94ee816487df7ba9~mv2.jpg" alt="Van Fundraiser" />
                     </div>
                 </div>
             </div>

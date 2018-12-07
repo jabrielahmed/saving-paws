@@ -66,13 +66,14 @@
                       <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
                     </div>
                     <div class="form-group">
-                      <textarea class="form-control" id="message" placeholder="Message" rows="7"></textarea></div>
+                      <textarea class="form-control" id="message" placeholder="Message" rows="7"></textarea>
+					</div>
                     <button type="button" id="submit" name="submit" class="btn btn-primary pull-right">Submit Form</button>
                   </form>
                 </div>
               </div>
               <div class="col-sm-5">
-                  <iframe title="Google Maps" aria-label="Google Maps" src="https://static.parastorage.com/services/santa/1.5597.4/static/external/googleMap.html?language=en&amp;lat=44.35204299999999&amp;long=-88.39571999999998&amp;address=N3141MeadeSt,Appleton,WI 54913,USA&amp;addressInfo=SavingPawsAnimal Rescue&amp;showZoom=true&amp;showStreetView=true&amp;showMapType=true" width="100%" height="350"></iframe>
+                  <iframe title="Google Maps" aria-label="Google Maps" src="https://static.parastorage.com/services/santa/1.5597.4/static/external/googleMap.html?language=en&amp;lat=44.35204299999999&amp;long=-88.39571999999998&amp;address=N3141MeadeSt,Appleton,WI54913,USA&amp;addressInfo=SavingPawsAnimalRescue&amp;showZoom=true&amp;showStreetView=true&amp;showMapType=true" style="width:100%; height:350px"></iframe>
               </div>
             </div>
           </div>
@@ -80,6 +81,7 @@
       </div>
     </div>
   </section>
+
     <!-- put custom js here -->
 <!-- js file --> 
 <!-- Main js file/jquery --> 
