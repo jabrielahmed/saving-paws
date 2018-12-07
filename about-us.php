@@ -59,6 +59,6 @@
       </div>
     </div>
   </section>
-</div>
+
 <!-- put custom js here -->
 <?php include("shared/footer.php");?>

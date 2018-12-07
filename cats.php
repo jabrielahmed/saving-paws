@@ -44,21 +44,36 @@ include("shared/header.php"); ?>
 			<?php $db = db_connect();
 			$cats = $db->query("SELECT * FROM Animals WHERE IsDog = 0;");
 			foreach($cats as $cat){
-				?><img src="<?php echo($cat["Picture"]); ?>" alt="A cat" class="float-left" height="225">
-				<p>Name: <?php echo($cat["Name"]); ?><br>
-				Gender: <?php echo($cat["Gender"]); ?><br>
-				Breed: <?php echo($cat["Breed"]); ?><br>
-				Size: <?php echo($cat["Size"]); ?><br>
-				Color: <?php echo($cat["Color"]); ?><br>
-				Birth Date: <?php echo($cat["BirthDate"]); ?></p>
-				<p>Description: <?php echo($cat["Description"]); ?></p>
-				<p>Fixed: <?php if(ord($cat["Fixed"])==1){echo("Yes");} else {echo("No");} ?>
-				&emsp;Declawed: <?php if(ord($cat["Declawed"])==1) {echo("Yes");} else {echo("No");} ?>
-				&emsp;Housetrained: <?php if(ord($cat["Housetrained"])==1) {echo("Yes");} else {echo("No");} ?></p>
-				<p>Site: <?php echo($cat["Site"]); ?></p>
-				<p>Location: <?php echo($cat["Location"]); ?></p>
-				<p>Intake Date: <?php echo($cat["IntakeDate"]); ?></p>
-				<br><?php
+				?>
+				<div class="row our-pet-services">
+					<div class="col-md-3 col-sm-6 col-xs-12">
+						<div class="our-pet-services-item">
+							<div class="our-pet-services-img">
+								<img src="<?php echo($cat["Picture"]); ?>" alt="A cat" class="float-left" height="225">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="our-pet-services-text">
+				
+					<p>Name: <?php echo($cat["Name"]); ?><br>
+					Gender: <?php echo($cat["Gender"]); ?><br>
+					Breed: <?php echo($cat["Breed"]); ?><br>
+					Size: <?php echo($cat["Size"]); ?><br>
+					Color: <?php echo($cat["Color"]); ?><br>
+					Birth Date: <?php echo($cat["BirthDate"]); ?></p>
+					<p>Description: <?php echo($cat["Description"]); ?></p>
+					<p>Fixed: <?php if(ord($cat["Fixed"])==1){echo("Yes");} else {echo("No");} ?>
+					&emsp;Declawed: <?php if(ord($cat["Declawed"])==1) {echo("Yes");} else {echo("No");} ?>
+					&emsp;Housetrained: <?php if(ord($cat["Housetrained"])==1) {echo("Yes");} else {echo("No");} ?></p>
+					<p>Site: <?php echo($cat["Site"]); ?></p>
+					<p>Location: <?php echo($cat["Location"]); ?></p>
+					<p>Intake Date: <?php echo($cat["IntakeDate"]); ?></p>
+					<br>
+					
+				</div>
+				
+				<?php
 			}
 			db_disconnect($db);
 			?>
@@ -71,8 +86,8 @@ include("shared/header.php"); ?>
 									<img src="images/home/img-2.jpg" alt="image">
 								</div>
 								<div class="our-pet-services-text">
-									<h5><a href="service-details.html">PET ADOPTION</a></h5>
-									<p>Whether your pet needs a scratch around the ear, a face to lick or a place to play,</p>
+									<h5><a href="adoptions.php">PET ADOPTION</a></h5>
+									<p>When a human gives a home to an animal who has no home, human is awarded with unconditional love.</p>
 								</div>
 							</div>
 						</div>
@@ -82,7 +97,7 @@ include("shared/header.php"); ?>
 									<img src="images/home/img-3.jpg" alt="image">
 								</div>
 								<div class="our-pet-services-text">
-									<h5><a href="service-details.html">PET GROOMING</a></h5>
+									<h5><a href="#">PET GROOMING</a></h5>
 									<p>Best Friends Pet Care is the leader of the pack when it comes to the absolute best care for your cat or dog.</p>
 								</div>
 							</div>
@@ -93,7 +108,7 @@ include("shared/header.php"); ?>
 									<img src="images/home/img-4.jpg" alt="image">
 								</div>
 								<div class="our-pet-services-text">
-									<h5><a href="service-details.html">Pet Health care</a></h5>
+									<h5><a href="#">Pet Health care</a></h5>
 									<p>In a professional context it often happens that private or corporate clients order a publication</p>
 								</div>
 							</div>
@@ -104,7 +119,7 @@ include("shared/header.php"); ?>
 									<img src="images/home/img-5.jpg" alt="image">
 								</div>
 								<div class="our-pet-services-text">
-									<h5><a href="service-details.html">DOG WALKING</a></h5>
+									<h5><a href="#">DOG WALKING</a></h5>
 									<p>Whether your pet needs a scratch around the ear, a face to lick or a place to play,</p>
 								</div>
 							</div>
@@ -115,7 +130,7 @@ include("shared/header.php"); ?>
 									<img src="images/home/img-6.jpg" alt="image">
 								</div>
 								<div class="our-pet-services-text">
-									<h5><a href="service-details.html">PET DAYCARE</a></h5>
+									<h5><a href="#">PET DAYCARE</a></h5>
 									<p>Best Friends Pet Care is the leader of the pack when it comes to the absolute best care for your cat or dog.</p>
 								</div>
 							</div>
@@ -126,7 +141,7 @@ include("shared/header.php"); ?>
 									<img src="images/home/img-7.jpg" alt="image">
 								</div>
 								<div class="our-pet-services-text">
-									<h5><a href="service-details.html">Nice Product</a></h5>
+									<h5><a href="#">Nice Product</a></h5>
 									<p>In a professional context it often happens that private or corporate clients order a publication</p>
 								</div>
 							</div>
@@ -137,7 +152,7 @@ include("shared/header.php"); ?>
 									<img src="images/services/img-7.jpg" alt="image">
 								</div>
 								<div class="our-pet-services-text">
-									<h5><a href="service-details.html">Puppy Program</a></h5>
+									<h5><a href="#">Puppy Program</a></h5>
 									<p>Whether your pet needs a scratch around the ear, a face to lick or a place to play,</p>
 								</div>
 							</div>
@@ -148,7 +163,7 @@ include("shared/header.php"); ?>
 									<img src="images/services/img-8.jpg" alt="image">
 								</div>
 								<div class="our-pet-services-text">
-									<h5><a href="service-details.html">Monthly Care Contracts</a></h5>
+									<h5><a href="#">Monthly Care Contracts</a></h5>
 									<p>Best Friends Pet Care is the leader of the pack when it comes to the absolute best care for your cat or dog.</p>
 								</div>
 							</div>
@@ -159,7 +174,7 @@ include("shared/header.php"); ?>
 									<img src="images/services/img-9.jpg" alt="image">
 								</div>
 								<div class="our-pet-services-text">
-									<h5><a href="service-details.html">Pet Care</a></h5>
+									<h5><a href="#">Pet Care</a></h5>
 									<p>In a professional context it often happens that private or corporate clients order a publication</p>
 								</div>
 							</div>
