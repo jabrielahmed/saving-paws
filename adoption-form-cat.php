@@ -4,6 +4,10 @@ include("shared/header.php");?>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-formhelpers/2.3.0/css/bootstrap-formhelpers.min.css">
 <link rel="stylesheet" href="css/adoption-form.css">
 <?php include("shared/navbar.php"); ?>
+<?php if (isset($_POST) && !empty($_POST)) {
+    $_POST["dog"] = false;
+    processForm();
+}?>
 <div class="container">
     <div class="row">
         <h1>Cat Adoption Form</h1>
@@ -148,14 +152,14 @@ include("shared/header.php");?>
                         First Choice:
                         <select name="PetChosen1" id="cats-chosen">
                             <?php foreach (getAllCats() as $cat) { ?>
-                                <option value="<?=$cat["Id"]?>"><?=$cat["Name"]?></option>
+                                <option value="<?=$cat["Name"]?>"><?=$cat["Name"]?></option>
                             <?php } ?>
                         </select>
 
                         Second Choice:
                         <select name="PetChosen2">
                             <?php foreach (getAllCats() as $cat) { ?>
-                                <option value="<?=$cat["Id"]?>"><?=$cat["Name"]?></option>
+                                <option value="<?=$cat["Name"]?>"><?=$cat["Name"]?></option>
                             <?php } ?>
                         </select>
                     </div>
